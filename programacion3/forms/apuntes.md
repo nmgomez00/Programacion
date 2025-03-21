@@ -47,4 +47,5 @@ antes se usaba **XML** pero ahora se usa **json**
 convertir objeto a texto
 ## deserialize
 convertir texto a objeto
-##
+---
+## datalist
