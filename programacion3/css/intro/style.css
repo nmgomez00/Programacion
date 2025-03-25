@@ -1,0 +1,17 @@
+h1 {
+  color: hotpink;
+  background-color: cyan;
+}
+h2 {
+  color: black;
+}
+.titulo {
+  color: red;
+}
+.fondo-negro {
+  background-color: grey;
+}
+#mi-super-titulo {
+  color: azure;
+  background-color: #000;
+}

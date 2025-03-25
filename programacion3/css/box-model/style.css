@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+}
+h1 {
+  /*overflow-x: hidden;*/
+  /* margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 10px;
+  margin-right: 10px; */
+  /*agujas del reloj empezando por top*/
+  margin: 8px;
+  padding: 10px;
+  /* border-width: 2px;
+  border-color: #000;
+  border-style: dashed; */
+  border: #000 dashed 2px;
+  min-width: 300px;
+  max-width: 500px;
+}
