@@ -1,0 +1,17 @@
+body {
+  background-color: #333;
+}
+/* .title + h2 {
+  color: red;
+} */
+/* .box .title {
+  color: red;
+} */
+/* .box2 .title {
+  color: red;
+} */
+
+.box > .title {
+  /*hijo directo*/
+  color: red;
+}

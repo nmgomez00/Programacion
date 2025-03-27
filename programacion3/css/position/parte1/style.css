@@ -1,0 +1,32 @@
+
+
+div {
+  color: #f0f0f0;
+  background-color: #333;
+
+  text-align: center;
+  width: 150px;
+  padding: 10px;
+  border: 1px solid red;
+
+  box-sizing: border-box;
+
+  margin: 0 auto;
+
+  position: relative;
+}
+.my-box1 {
+  z-index: 1;
+  position-fixed;
+}
+.my-box2 {
+  padding: 10px;
+  background-color: #333;
+  border: 1px solid red;
+
+  z-index: 1;
+
+  position: absolute;
+  top: 5px;
+  left: 20px;
+} 

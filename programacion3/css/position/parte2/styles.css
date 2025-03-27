@@ -1,0 +1,46 @@
+div {
+  color: #f0f0f0;
+  background-color: #333;
+
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid red;
+
+  box-sizing: border-box;
+
+  margin: 0 auto;
+}
+.static {
+  position: static;
+  top: 0px;
+  left: 0px;
+}
+.absolute {
+  position: absolute;
+  top: 0px;
+  right: calc(50vw - (150px / 2));
+}
+.fixed {
+  position: fixed;
+  right: 0;
+  top: calc(50vh - 20px);
+}
+.sticky {
+  position: sticky;
+  top: 0; /*se pega deacuerdo si esta en top bottom right left  */
+}
+.box {
+  position: relative; /*para el contenedor*/
+  width: 60%;
+  height: 200px;
+  margin: 10px auto;
+  border: 2px solid blue;
+  padding 0;
+}
+.relative {
+  margin 0;
+  position: absolute;
+  top: 0px;
+}
