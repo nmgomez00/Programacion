@@ -13,7 +13,9 @@
 2. diseño e implementacion
 3. validacion del software
 4. Evolucion del software
+
    De cada una de ellas:
+
 5. productos
 6. roles
 7. pre condiciones y post condiciones (condiciones que tienen que pasar para arrancar la actividad o empezar otra)
@@ -66,9 +68,58 @@ Existen modelos genericos y especificos
 
 3. Modelo orientado a la reutilizacion de componentes
 
-- Etapa 1: Especificacion
+- Especificacion
+
+  Realizar la ingenieria de requisitos
+
+  - Estudio de la factibilidad: De esto obtenemos el informe de factibilidad, analisis financiero (cotizacion), estimaciones de tiempo
+  - Obtencion y analisis de los requerimientos. Esto se logra a través de preguntas, ejemplos funcionales, encuesta a los usuarios, observacion de los usuarios (trabajo de campo), conocer a los proveedores, ver sus sistemas, y adaptase a ellos.
+  - Generamos un modelo de sistema: A atraves de diagramas, por ejemplo, de caso de uso, dfd, diagrama de actividades o estado, etc.
+  - Con todo esto, realizamos la especificacion de requerimientos, haciendo un ida y vuelta con la Obtencion y analisis de los requerimientos
+  - Validacion: hay que validar todo el proceso.
+
+  - requisitos de usuarios y sistema: Se realiza a través de la especificacion de requerimientos.
+  - documentacion de requerimientos: El objetivo de la epecificacion en esto modelo de reutilizacion a trevés de la ingenieria de requerimientos
+
+- Diseño e implementacion (Se retroalimentan):
+
+  - Entrada de diseño
+    - especificacion de requerimientos
+    - Descripcion de los datos
+    - Plataforma de informacion (informacion del relevante al sistema, que tecnologias prefiere, todo el software circundante)
+  - Actividades de diseño
+    - Diseño arquitectonico
+    - Diseño interfaz
+    - Diseño de componentes
+    - Diseño de bases de datos
+  - salida de diseño
+
+    - Arquitectura del sistema
+    - Especificacion de bases de datos
+    - Especificacion de la interfaz
+    - Especificacion de componentes
+      offtopic (vercel v0)
+
+- Validacion:
+  - Especificacion de requisitos
+  - Especificacion del sistema
+  - Diseño del sistema
+  - Diseño detallado
+  - programacion y prueba de unidad
+  - Prueba de integracion a nivel subsistema
+  - Prueba de integracion del sistema
+  - Prueba de aceptacion
+  - servicio
+    Se establecen plan de pruebas de subsistemas (con el diseño del sistema), sistema, aceptacion (con especificacion).
+
+---
+
+CORREGIR ESTA PARTE
+
 - Etapa 2: Analisis de componentes
 - Etapa 3: Modificar los requisitos
 - Etapa 4: Diseño de sistema de reutilizacion
 - Etapa 5: Desarrollo e integracion
 - Etapa 6: Validacion
+
+---
