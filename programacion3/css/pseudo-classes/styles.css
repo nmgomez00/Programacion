@@ -1,0 +1,45 @@
+body {
+  background-color: #333;
+  color: #f0f0f0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 5px 10px;
+  transition: background-color linear 0.5s, border ease 0.5s;
+  border: 1px solid transparent;
+}
+
+/* Una pseudo clase representa el estado actual de un elemento. */
+/* transition: Si lo colocamos dentro del li:hover, solo afecta a al iniciar el evento, cuando ponemos el mouse */
+li:hover {
+  background-color: #000;
+  border: 1px solid red;
+  /* transition: background-color linear 0.3s; */
+}
+
+/* Selecciona el tercer elemento de una lista */
+/* Si colocamos (even) le colocará dicho elemento a los elementos pares. si ponemos (odd) son impares */
+li:nth-child(3) {
+  background-color: white;
+}
+
+/* Solo le va a dar el color al fondo si el h2 es el 3er elemento dentro de su contenedor. */
+/* Es decir, que sea el 3er hijo del contenedor. */
+h2:nth-child(3) {
+  background-color: blue;
+}
+
+/* Le coloca el color solo al primer hijo de dicho tipo por cada contenedor que exista. */
+/* Si colocamos div p:first-of-type solo pasará con los p dentro de un div */
+p:first-of-type {
+  color: blue;
+}
