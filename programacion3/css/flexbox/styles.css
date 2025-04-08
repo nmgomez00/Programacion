@@ -1,5 +1,9 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
 .container {
-  width: 550px;
+  width: 490px;
   height: 500px;
   margin: 0 auto;
   margin-top: 30px;
@@ -7,19 +11,15 @@
 
   display: flex;
   flex-wrap: wrap;
-/* main axis */
-  justify-content:space-between;
+  /* main axis */
+  justify-content: space-between;
   /*cross axis*/
   align-items: space-between;
-  
-/*tarea englobar los numeros con divs */
-  flex-direction: row; /*cambia el sentido del axis (90 degrees)*/
-  gap:20px;
+
+  /*tarea englobar los numeros con divs */
+  flex-direction: column; /*cambia el sentido del axis (90 degrees)*/
 }
-body {
-    margin 0px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+
 .contained {
   width: 50px;
   height: 50px;
@@ -27,4 +27,12 @@ body {
   background-color: grey;
   border-color: #333;
   color: #f0f0f0;
+}
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  gap: 20px;
 }
