@@ -123,3 +123,56 @@ CORREGIR ESTA PARTE
 - Etapa 6: Validacion
 
 ---
+
+## Espiral:
+
+- Se desarrollan prototipos para lograr adquirir mas especificaciones
+  (especificacion - desarrolo e implementacion - validacion - Evaluacion )
+
+- Revision
+- analisis de riesgo
+- Desarrolo y validacion
+- planificacion
+
+## Rup (Rational Unified Process)
+
+- (especificacion - desarrolo e implementacion - validacion - Evaluacion )
+  RUP por lo general se describe desde tres perspectivas:
+
+1. Una perspectiva dinámica que muestra las fases del modelo a través del tiempo.
+2. Una perspectiva estática que presenta las actividades del proceso que se establecen.
+3. Una perspectiva práctica que sugiere buenas prácticas a usar durante el proceso.
+
+- Posee una fase Concepcion, Elaboracion, contruccion y transicion
+
+  - Concepcion:
+  - Elaboracion:
+  - Contruccion:
+  - transicion:
+    Todos estos procesos pueden ser iterativos en un desarrollo incremental
+
+- Describe buenas practicas
+  - Desarrollo de software de manera iterativa
+  - Gestión de requerimientos
+  - Usar arquitecturas basadas en componentes
+  - Software modelado visualmente
+  - Verificar la calidad del software
+  - Controlar los cambios al software
+
+## Ingenieria de requerimientos
+
+- Es un enunciado en lenguaje natural el cual describe la funcionalidad que necesitamos para un sistema mas grande. Se suele acompañar con diagramas, de caso de usos.
+
+### tipos de requerimientos
+
+Dentro de los requerimientos tenenos los de **Usuario** (Lo que queremos), y los de **sistema** (Como lo hacemos).
+
+- Otros tipos:
+
+  - Funcionales: Que es lo que tiene que hacer el sistema y lo que no tiene que hacer
+  - No funcionales: son restricciones, actividad de soporte a la funcionalidad. Requisitos que no añaden a la funcionalidad pero añaden limitaciones s sobre servicios o funciones que ofrece el sistema.
+    (Tienen que estar bien descriptas)
+
+    ***
+
+    next: diagramas de caso de uso, documentos de requisitos
