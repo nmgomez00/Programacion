@@ -1,0 +1,33 @@
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+section {
+  width: 100vh;
+  display: grid;
+  border: 1px solid white;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  border: 1px solid white;
+  padding: 10px;
+}
+.dia {
+  border: 1px solid white;
+}
+
+.first {
+  grid-column-start: 1;
+}
+.dia_nombre {
+  text-align: center;
+}
+.dia {
+  text-align: right;
+}
+.dia_nombre {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: 1px solid white;
+}
