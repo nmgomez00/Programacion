@@ -1,1 +1,10 @@
 El mail puede ser null
+el ambito es una tabla nueva
+Codigo de are es una tabla nueva
+sector es una tabla
+
+CREATE TABLE IF NOT EXISTS "Base"(
+"Jurisdicción" TEXT, "CUE Anexo" TEXT, "Nombre" TEXT, "Sector" TEXT,
+ "Ámbito" TEXT, "Domicilio" TEXT, "CP" TEXT, "Código de área" TEXT,
+ "Teléfono" TEXT, "Código localidad" TEXT, "Localidad" TEXT, "Departamento" TEXT,
+ "Mail" TEXT);
