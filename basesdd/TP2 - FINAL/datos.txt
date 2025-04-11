@@ -1,0 +1,207 @@
+complete sample:
+
+5781|SAEZ|large_airport|Minister Pistarini International Airport|-34.8222|-58.5358|67|SA|Argen
+tina|AR|Buenos Aires Province|AR-B|B|Buenos Aires (Ezeiza)|1|SAEZ|SAEZ|EZE|EZE|http://www.aa20
+00.com.ar/index.php|https://en.wikipedia.org/wiki/Ministro_Pistarini_International_Airport|BUE
+, Ezeiza|1275|2022-10-27T15:05:29+00:00
+5806|SARI|medium_airport|Cataratas Del Iguazú International Airport|-25.737301|-54.4734|916|SA
+|Argentina|AR|Misiones Province|AR-N|N|Puerto Iguazu|1|SARI|SARI|IGR|IGU|http://www.aa2000.com
+.ar/iguazu|https://en.wikipedia.org/wiki/Cataratas_del_Iguaz%C3%BA_International_Airport|Iguaç
+u|750|2018-09-13T12:34:47+00:00
+5852|SAZS|medium_airport|San Carlos de Bariloche Airport|-41.151199|-71.157501|2774|SA|Argenti
+na|AR|Río Negro Province|AR-R|R|San Carlos de Bariloche|1|SAZS|SAZS|BRC|BAR|http://www.aa2000.
+com.ar/bariloche|https://en.wikipedia.org/wiki/San_Carlos_de_Bariloche_Airport|Teniente Luis C
+andelaria|750|2025-03-09T01:30:49+00:00
+5840|SAZB|medium_airport|Comandante Espora Airport|-38.725|-62.1693|246|SA|Argentina|AR|Buenos
+ Aires Province|AR-B|B|Bahía Blanca|1|SAZB|SAZB|BHI|BCA|https://www.aeropuertobahiablanca.com/
+|https://en.wikipedia.org/wiki/Comandante_Espora_Airport|Bahía Blanca Airport|750|2025-03-19T0
+3:18:32+00:00
+
+"id" TEXT, "ident" TEXT, "type" TEXT, "name" TEXT,
+ "latitude_deg" TEXT, "longitude_deg" TEXT, "elevation_ft" TEXT, "continent" TEXT,
+ "country_name" TEXT, "iso_country" TEXT, "region_name" TEXT, "iso_region" TEXT,
+ "local_region" TEXT, "municipality" TEXT, "scheduled_service" TEXT, "gps_code" TEXT,
+ "icao_code" TEXT, "iata_code" TEXT, "local_code" TEXT, "home_link" TEXT,
+ "wikipedia_link" TEXT, "keywords" TEXT, "score" TEXT, "last_updated" TEXT)
+---------------------------------------------------
+create table Airport(id integer not null primary key autoincrement, 
+ident varchar(7) not null unique, 
+type_id int not null,
+name varchar(75) not null, 
+latitude_deg real not null, longitude_deg real not null , 
+region_id int not null,
+municipality_id int default '',scheduled_service BOOLEAN NOT NULL,
+gps_code varchar(4) default '',
+icao_code varchar(4) unique 
+check(icao_code is null or icao_code GLOB '[a-zA-Z][a-zA-Z][a-zA-Z][a-zA-Z]'),
+iata_code varchar(3) 
+check(iata_code is null or iata_code GLOB '[A-Za-z][A-Za-z][A-Za-z]'),
+local_code varchar(10) default '',home_link varchar(100) default '',
+wikipedia_link varchar(100) default '',
+keywords varchar(100) default '',score int not null check(score>=0),
+last_updated text not null,
+foreign key (type_id) references Type(id),
+foreign key (municipality_id) references Municipality(id),
+foreign key (region_id) references Region(id)  );
+
+------------
+create table Type(id integer not null primary key autoincrement, type varchar(14) not null)
+------------
+insert into Municipality(name,region_id) select distinct b.municipality, r.id 
+from base b inner join Region r where r.iso_region = b.iso_region 
+and municipality is not null;
+----------------------------
+CREATE TABLE Municipality (id integer not null primary key autoincrement, name
+ varchar(50) not null, region_id int not null, 
+foreign key(region_id) references Region(id));
+CREATE UNIQUE INDEX uix_muni on Municipality(region_id, name);
+
+-------------------------------
+insert into Municipality(name,region_id) 
+
+select count( distinct b.municipality || '-' || r.id) 
+from base b inner join Region r on r.iso_region = b.iso_region 
+and b.local_region = r.local_region 
+and b.region_name = r.name
+and b.municipality is not null and municipality != '' and 
+r.iso_region is not null and r.iso_region != ''; 
+
+------------------------
+SELECT b.municipality, r.name AS distinct_region_ids
+FROM base b
+INNER JOIN Region r ON r.iso_region = b.iso_region
+AND b.local_region = r.local_region
+AND b.region_name = r.name
+WHERE b.municipality IS NOT NULL
+AND b.municipality != ''
+AND r.iso_region IS NOT NULL
+AND r.iso_region != ''
+GROUP BY b.municipality, r.name
+HAVING COUNT(r.id) > 1;
+
+----------------------
+INSERT INTO Airport (
+    ident,
+    type_id,
+    name,
+    latitude_deg,
+    longitude_deg,
+    region_id,
+    municipality_id,
+    scheduled_service,
+    gps_code,
+    icao_code,
+    iata_code,
+    local_code,
+    home_link,
+    wikipedia_link,
+    keywords,
+    score,
+    last_updated
+)
+SELECT DISTINCT
+    b.ident,
+    t.id,
+    b.name,
+    CAST(b.latitude_deg AS REAL),
+    CAST(b.longitude_deg AS REAL),
+    r.id,
+    m.id,
+    CAST(b.scheduled_service AS integer), 
+    b.gps_code,
+    b.icao_code,
+    b.iata_code,
+    b.local_code,
+    b.home_link,
+    b.wikipedia_link,
+    b.keywords,
+    CAST(b.score AS INTEGER),
+    b.last_updated
+FROM base b
+INNER JOIN Type t ON b.type = t.name
+INNER JOIN Region r ON b.iso_region = r.iso_region
+INNER JOIN Municipality m ON b.municipality = m.name 
+and b.municipality is not null;
+
+
+
+
+si un valor puede ser null (municipality) no lo incluyas en el inner join
+
+------------------------
+SELECT DISTINCT
+    b.ident,
+    t.id,
+    b.name,
+    CAST(b.latitude_deg AS REAL),
+    CAST(b.longitude_deg AS REAL),
+    r.id,
+    m.id,
+    CAST(b.scheduled_service AS INTEGER),
+    b.gps_code,
+    b.icao_code,
+    b.iata_code,
+    b.local_code,
+    b.home_link,
+    b.wikipedia_link,
+    b.keywords,
+    CAST(b.score AS INTEGER),
+    b.last_updated,
+    count(*)
+FROM base b
+INNER JOIN Type t ON b.type = t.name
+INNER JOIN Region r ON b.iso_region = r.iso_region
+INNER JOIN Municipality m ON b.municipality = m.name and b.municipality != '' and 
+m.name != ''
+group by
+  b.ident,
+    t.id,
+    b.name,
+    CAST(b.latitude_deg AS REAL),
+    CAST(b.longitude_deg AS REAL),
+    r.id,
+    m.id,
+    CAST(b.scheduled_service AS INTEGER),
+    b.gps_code,
+    b.icao_code,
+    b.iata_code,
+    b.local_code,
+    b.home_link,
+    b.wikipedia_link,
+    b.keywords,
+    CAST(b.score AS INTEGER),
+    b.last_updated
+having count(*)>1;
+-------------
+SELECT COUNT(DISTINCT
+    b.ident ||
+    '-' || t.id ||
+    '-' || b.name ||
+    '-' || CAST(b.latitude_deg AS REAL) ||
+    '-' || CAST(b.longitude_deg AS REAL) ||
+    '-' || r.id ||
+    '-' || m.id ||
+    '-' || CAST(b.scheduled_service AS INTEGER) || -- BOOLEAN in SQLite is INTEGER (0 or non-zero)
+    '-' || b.gps_code ||
+    '-' || b.icao_code ||
+    '-' || b.iata_code ||
+    '-' || b.local_code ||
+    '-' || b.home_link ||
+    '-' || b.wikipedia_link ||
+    '-' || b.keywords ||
+    '-' || CAST(b.score AS INTEGER) ||
+    '-' || b.last_updated
+)
+FROM base b
+INNER JOIN Type t ON b.type = t.name AND b.ident != ''
+INNER JOIN Region r ON b.iso_region = r.iso_region
+INNER JOIN Municipality m ON b.municipality = m.name;
+---------------------
+SELECT COUNT(
+    b.ident)
+
+FROM base b
+INNER JOIN Type t ON b.type = t.name 
+INNER JOIN Region r ON b.iso_region = r.iso_region and b.local_region = r.local_region
+INNER JOIN Municipality m ON b.municipality = m.name;
+ 

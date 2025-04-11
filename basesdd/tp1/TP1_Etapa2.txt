@@ -69,7 +69,7 @@ provincia_id que  no esten como ID en la tabla Provincia.
 
 Ademas, tenemos que asegurarnos que la combinacion de provincia_id y nombre no se repitan
 en la tabla Departamento.
-
+tege
 Aca no podemos usar la clausula unique como hicimos antes ya que la unicidad involucra mas de una columna.
 La solucion es crear un UNIQUE INDEX sobre estas dos columnas.
 Asi es como creamos un UNIQUE index:
