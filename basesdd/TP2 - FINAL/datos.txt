@@ -27,22 +27,26 @@ andelaria|750|2025-03-09T01:30:49+00:00
 create table Airport(id integer not null primary key autoincrement, 
 ident varchar(7) not null unique, 
 type_id int not null,
-name varchar(75) not null, 
-latitude_deg real not null, longitude_deg real not null , 
+name varchar(255) not null, 
+latitude_deg real not null, 
+longitude_deg real not null ,
+elevation_ft real not null,
 region_id int not null,
-municipality_id int default '',scheduled_service BOOLEAN NOT NULL,
+municipality_id int default '',
+scheduled_service INTEGER NOT NULL CHECK(scheduled_service in(0,1)),
 gps_code varchar(4) default '',
 icao_code varchar(4) unique 
 check(icao_code is null or icao_code GLOB '[a-zA-Z][a-zA-Z][a-zA-Z][a-zA-Z]'),
 iata_code varchar(3) 
 check(iata_code is null or iata_code GLOB '[A-Za-z][A-Za-z][A-Za-z]'),
-local_code varchar(10) default '',home_link varchar(100) default '',
-wikipedia_link varchar(100) default '',
-keywords varchar(100) default '',score int not null check(score>=0),
+local_code varchar(10) default '',
+home_link varchar(255) default '',
+wikipedia_link varchar(255) default '',
+keywords varchar(255) default '',score int not null check(score>=0),
 last_updated text not null,
 foreign key (type_id) references Type(id),
 foreign key (municipality_id) references Municipality(id),
-foreign key (region_id) references Region(id)  );
+foreign key (region_id) references Region(id));
 
 ------------
 create table Type(id integer not null primary key autoincrement, type varchar(14) not null)
@@ -70,7 +74,7 @@ r.iso_region is not null and r.iso_region != '';
 SELECT b.municipality, r.name AS distinct_region_ids
 FROM base b
 INNER JOIN Region r ON r.iso_region = b.iso_region
-AND b.local_region = r.local_region
+AND b.local_.region = r.local_region
 AND b.region_name = r.name
 WHERE b.municipality IS NOT NULL
 AND b.municipality != ''
@@ -80,7 +84,7 @@ GROUP BY b.municipality, r.name
 HAVING COUNT(r.id) > 1;
 
 ----------------------
-INSERT INTO Airport (
+INSERT OR IGNORE INTO Airport (
     ident,
     type_id,
     name,
