@@ -1,4 +1,6 @@
-.boton-derecha:hover::after {
+button:hover::after {
+  content: atrr(data-arrow-right) ". ";
 }
-.boton-izquierda:hover::before {
+button:hover::before {
+  content: atrr(data-arrow-left) ". ";
 }
