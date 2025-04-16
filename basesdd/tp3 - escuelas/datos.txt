@@ -13,9 +13,9 @@ CREATE TABLE IF NOT EXISTS "Base"(
 Tabla localidad - Datos mal cargados - ¡fijarse! 
 ** ver codigo postal **
 -----
-CREATE TABLE Departamento(id integer primary key autoincrement, nombre varchar(64) not null, ju
-risdiccion_id int not null, foreign key (jurisdiccion_id) references Jurisdiccion(id));
-sqlite> select count(*) from Jurisdiccion;
+CREATE TABLE Departamento(id integer primary key autoincrement, nombre varchar(64) not null, 
+jurisdiccion_id int not null, foreign key (jurisdiccion_id) references Jurisdiccion(id));
+
 -----
 CREATE TABLE Localidad(id integer not null primary key autoincrement,
 codigo_localidad  int not null,
@@ -23,9 +23,15 @@ nombre varchar(255) not null,
  departamento_id int not null, 
 foreign key(departamento_id) references Departamento(id));
 
-insert into Localidad(codigo_localidad) select distinct 
+insert into Localidad(codigo_localidad, nombre, departamento_id) 
+select distinct 
 b."Código localidad", b.Localidad, d.id 
-from base inner join Departamento d... CONTINUAR...
+from base b inner join Departamento d ON b.Departamento = d.nombre;
+-----
+CREATE TABLE Departamento(id integer primary key autoincrement, nombre varchar(64) not null,
+jurisdiccion_id int not null, foreign key (jurisdiccion_id) references Jurisdiccion(id));
+sqlite> insert into Departamento(nombre, jurisdiccion_id) select distinct b.Departamento, 
+j.id from base b inner join Jurisdiccion j ON b.Jurisdicción = j.nombre;
 
 
 -----
@@ -73,8 +79,8 @@ inner join Codigo_de_area ca ON b."Código de área" = ca.nombre
 inner join Codigo_postal cpo on b.CP = cpo.nombre;
 
 -----
-CREATE TABLE Jurisdiccion(id integer primary key autoincrement, nombre varchar(6
-4) not null);
+CREATE TABLE Jurisdiccion(id integer primary key autoincrement, nombre varchar
+(64) not null);
 CREATE TABLE Sector(id integer primary key autoincrement, nombre varchar(64) not
  null);
 CREATE TABLE Ambito(id integer primary key autoincrement, nombre varchar(64) not
@@ -97,3 +103,8 @@ foreign key (ambito_id) references Ambito(id),
 foreign key (codigo_postal_id) references Codigo_postal(id),
 foreign key (codigo_de_area_id) references Codigo_de_area(id));
 -----
+UPDATE your_table
+SET field1 = 'new value for field1',
+    field2 = 123,
+    field3 = CURRENT_TIMESTAMP
+WHERE some_condition;
