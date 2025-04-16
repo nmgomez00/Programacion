@@ -1,10 +1,99 @@
 El mail puede ser null
 el ambito es una tabla nueva
-Codigo de are es una tabla nueva
+Codigo de area es una tabla nueva
 sector es una tabla
+
 
 CREATE TABLE IF NOT EXISTS "Base"(
 "Jurisdicción" TEXT, "CUE Anexo" TEXT, "Nombre" TEXT, "Sector" TEXT,
  "Ámbito" TEXT, "Domicilio" TEXT, "CP" TEXT, "Código de área" TEXT,
  "Teléfono" TEXT, "Código localidad" TEXT, "Localidad" TEXT, "Departamento" TEXT,
  "Mail" TEXT);
+
+Tabla localidad - Datos mal cargados - ¡fijarse! 
+** ver codigo postal **
+-----
+CREATE TABLE Departamento(id integer primary key autoincrement, nombre varchar(64) not null, ju
+risdiccion_id int not null, foreign key (jurisdiccion_id) references Jurisdiccion(id));
+sqlite> select count(*) from Jurisdiccion;
+-----
+CREATE TABLE Localidad(id integer not null primary key autoincrement,
+codigo_localidad  int not null,
+nombre varchar(255) not null,
+ departamento_id int not null, 
+foreign key(departamento_id) references Departamento(id));
+
+insert into Localidad(codigo_localidad) select distinct 
+b."Código localidad", b.Localidad, d.id 
+from base inner join Departamento d... CONTINUAR...
+
+
+-----
+create table Localidad_Codigo_de_area(id integer not null primary key 
+autoincrement, localidad_id int not null, codigo_de_area_id not null, foreign 
+key (localidad_id) references Localidad(id), foreign key (codigo_de_area_id)
+references Codigo_de_area(id));
+
+insert into Localidad_Codigo_de_area(localidad_id, codigo_de_area_id) select 
+distinct l.nombre,l.id, c.nombre, c.id from Localidad l inner join Base b ON
+l.nombre = b.Localidad inner join Codigo_de_area c ON b."Código de área" = 
+c.nombre;
+
+
+create table Codigo_postal(id integer not null primary key autoincrement
+, nombre varchar(64) not null, localidad_id int not null, foreign key 
+(localidad_id) references Localidad(id));
+
+insert or ignore into Codigo_postal(nombre, localidad_id) 
+select distinct b.CP,l.id 
+from base b inner join Localidad l on b.Localidad = l.nombre;
+
+----------
+create table Escuela(id integer not null primary key autoincrement, nombre
+varchar(64) not null, cue_anexo int not null check(cue_anexo>0),
+sector_id int not null, ambito_id int not null, codigo_de_area_id int not null,
+domicilio varchar(255)
+not null, telefono varchar(255) not null, codigo_postal_id int not null,
+mail varchar(255), foreign key (sector_id) references Sector(id),
+foreign key (ambito_id) references Ambito(id),
+foreign key (codigo_postal_id) references Codigo_postal(id),
+foreign key (codigo_de_area_id) references Codigo_de_area(id));
+
+insert into Escuela(nombre, cue_anexo, sector_id, ambito_id, codigo_de_area_id,
+domicilio,telefono, codigo_postal_id, mail)
+select distinct
+b.Nombre, 
+cast(b."CUE Anexo" as integer),
+s.id, a.id, ca.id,
+b.Domicilio,b.Teléfono, 
+cpo.id, b.Mail from
+base b inner join Sector s ON b.Sector = s.nombre 
+inner join Ambito a ON b.Ámbito = a.nombre
+inner join Codigo_de_area ca ON b."Código de área" = ca.nombre
+inner join Codigo_postal cpo on b.CP = cpo.nombre;
+
+-----
+CREATE TABLE Jurisdiccion(id integer primary key autoincrement, nombre varchar(6
+4) not null);
+CREATE TABLE Sector(id integer primary key autoincrement, nombre varchar(64) not
+ null);
+CREATE TABLE Ambito(id integer primary key autoincrement, nombre varchar(64) not
+ null);
+CREATE TABLE Departamento(id integer primary key autoincrement, nombre varchar(6
+4) not null, jurisdiccion_id int not null, foreign key (jurisdiccion_id) referen
+ces Jurisdiccion(id));
+CREATE TABLE Codigo_de_area(id integer primary key autoincrement, nombre varchar
+(64) not null);
+CREATE TABLE Codigo_postal(id integer not null primary key autoincrement
+, nombre varchar(64) not null, localidad_id int not null, foreign key
+(localidad_id) references Localidad(id));
+CREATE TABLE Escuela(id integer not null primary key autoincrement, nombre
+varchar(64) not null, cue_anexo int not null check(cue_anexo>0),
+sector_id int not null, ambito_id int not null, codigo_de_area_id int not null,
+domicilio varchar(255)
+not null, telefono varchar(255) not null, codigo_postal_id int not null,
+mail varchar(255), foreign key (sector_id) references Sector(id),
+foreign key (ambito_id) references Ambito(id),
+foreign key (codigo_postal_id) references Codigo_postal(id),
+foreign key (codigo_de_area_id) references Codigo_de_area(id));
+-----
