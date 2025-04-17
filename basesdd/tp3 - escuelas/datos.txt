@@ -18,12 +18,12 @@ jurisdiccion_id int not null, foreign key (jurisdiccion_id) references Jurisdicc
 
 -----
 CREATE TABLE Localidad(id integer not null primary key autoincrement,
-codigo_localidad  int not null,
+codigo_localidad  int not null unique,
 nombre varchar(255) not null,
  departamento_id int not null, 
 foreign key(departamento_id) references Departamento(id));
 
-insert into Localidad(codigo_localidad, nombre, departamento_id) 
+insert or ignore into Localidad(codigo_localidad, nombre, departamento_id) 
 select distinct 
 b."Código localidad", b.Localidad, d.id 
 from base b inner join Departamento d ON b.Departamento = d.nombre;
@@ -41,27 +41,29 @@ key (localidad_id) references Localidad(id), foreign key (codigo_de_area_id)
 references Codigo_de_area(id));
 
 insert into Localidad_Codigo_de_area(localidad_id, codigo_de_area_id) select 
-distinct l.nombre,l.id, c.nombre, c.id from Localidad l inner join Base b ON
+distinct l.id, c.id from Localidad l inner join Base b ON
 l.nombre = b.Localidad inner join Codigo_de_area c ON b."Código de área" = 
 c.nombre;
 
 
 create table Codigo_postal(id integer not null primary key autoincrement
-, nombre varchar(64) not null, localidad_id int not null, foreign key 
+, nombre varchar(64) not null unique, localidad_id int not null, foreign key 
 (localidad_id) references Localidad(id));
 
 insert or ignore into Codigo_postal(nombre, localidad_id) 
 select distinct b.CP,l.id 
-from base b inner join Localidad l on b.Localidad = l.nombre;
+from base b inner join Localidad l on b."Código localidad" = l.codigo_localidad;
 
 ----------
 create table Escuela(id integer not null primary key autoincrement, nombre
-varchar(64) not null, cue_anexo int not null check(cue_anexo>0),
+varchar(64) not null, cue_anexo int not null unique check(cue_anexo>0),
 sector_id int not null, ambito_id int not null, codigo_de_area_id int not null,
+localidad_id int not null,
 domicilio varchar(255)
 not null, telefono varchar(255) not null, codigo_postal_id int not null,
 mail varchar(255), foreign key (sector_id) references Sector(id),
 foreign key (ambito_id) references Ambito(id),
+foreign key (localidad_id) references Localidad(id),
 foreign key (codigo_postal_id) references Codigo_postal(id),
 foreign key (codigo_de_area_id) references Codigo_de_area(id));
 
