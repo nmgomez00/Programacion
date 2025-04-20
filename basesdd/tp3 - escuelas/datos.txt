@@ -42,8 +42,8 @@ references Codigo_de_area(id));
 
 insert into Localidad_Codigo_de_area(localidad_id, codigo_de_area_id) select 
 distinct l.id, c.id from Localidad l inner join Base b ON
-l.nombre = b.Localidad inner join Codigo_de_area c ON b."Código de área" = 
-c.nombre;
+l.codigo_localidad = b."Código localidad" inner join Codigo_de_area c ON 
+b."Código de área" = c.nombre;
 
 
 create table Codigo_postal(id integer not null primary key autoincrement
@@ -61,23 +61,27 @@ sector_id int not null, ambito_id int not null, codigo_de_area_id int not null,
 localidad_id int not null,
 domicilio varchar(255)
 not null, telefono varchar(255) not null, codigo_postal_id int not null,
-mail varchar(255), foreign key (sector_id) references Sector(id),
-foreign key (ambito_id) references Ambito(id),
+mail varchar(255), 
+foreign key (sector_id) references Sector(id),
+foreign key. (ambito_id) references Ambito(id),
 foreign key (localidad_id) references Localidad(id),
 foreign key (codigo_postal_id) references Codigo_postal(id),
 foreign key (codigo_de_area_id) references Codigo_de_area(id));
 
+
+
 insert into Escuela(nombre, cue_anexo, sector_id, ambito_id, codigo_de_area_id,
-domicilio,telefono, codigo_postal_id, mail)
+localidad_id,domicilio,telefono, codigo_postal_id, mail)
 select distinct
 b.Nombre, 
 cast(b."CUE Anexo" as integer),
-s.id, a.id, ca.id,
+s.id, a.id, ca.id,l.id,
 b.Domicilio,b.Teléfono, 
 cpo.id, b.Mail from
 base b inner join Sector s ON b.Sector = s.nombre 
 inner join Ambito a ON b.Ámbito = a.nombre
 inner join Codigo_de_area ca ON b."Código de área" = ca.nombre
+inner join Localidad l ON b."Código localidad" = l.codigo_localidad
 inner join Codigo_postal cpo on b.CP = cpo.nombre;
 
 -----
