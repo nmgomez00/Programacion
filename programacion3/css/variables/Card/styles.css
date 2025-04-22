@@ -1,0 +1,70 @@
+:root {
+  --primary-color: #d5ead6;
+  --secondary-color: #dadada;
+  --tertiary-color: #d8fca8;
+  --button-text-color: #000000;
+}
+.dark-mode {
+  --primary-color: #487f4b;
+  --secondary-color: #464646;
+  --tertiary-color: #799b4d;
+  --button-text-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--secondary-color);
+}
+.card {
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+
+  width: 400px;
+  height: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.article-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.article-price {
+  justify-self: flex-end;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  padding: 5px;
+  background-color: var(--tertiary-color);
+}
+.card button {
+  background-color: var(--tertiary-color); /* Green */
+  border: none;
+  color: var(--button-text-color);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.card button:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+  transition: transform 0.1s ease-out;
+}
