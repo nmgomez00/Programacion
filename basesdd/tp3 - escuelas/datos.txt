@@ -13,6 +13,23 @@ CREATE TABLE IF NOT EXISTS "Base"(
 Tabla localidad - Datos mal cargados - ¡fijarse! 
 ** ver codigo postal **
 -----
+insert into Sector(nombre) 
+select distinct 
+Sector 
+from base order by 1;
+
+select * from Ambito;
+
+insert into Ambito(nombre) 
+select distinct 
+Ámbito
+from Base where Ámbito is not null order by 1;
+
+insert into Jurisdiccion(nombre) 
+select distinct 
+Jurisdicción
+from Base where Jurisdicción is not null order by 1;
+---
 CREATE TABLE Departamento(id integer primary key autoincrement, nombre varchar(64) not null, 
 jurisdiccion_id int not null, foreign key (jurisdiccion_id) references Jurisdiccion(id));
 
@@ -30,6 +47,7 @@ from base b inner join Departamento d ON b.Departamento = d.nombre;
 -----
 CREATE TABLE Departamento(id integer primary key autoincrement, nombre varchar(64) not null,
 jurisdiccion_id int not null, foreign key (jurisdiccion_id) references Jurisdiccion(id));
+
 sqlite> insert into Departamento(nombre, jurisdiccion_id) select distinct b.Departamento, 
 j.id from base b inner join Jurisdiccion j ON b.Jurisdicción = j.nombre;
 
