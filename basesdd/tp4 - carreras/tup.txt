@@ -1,0 +1,56 @@
+Carreras:
+carrera,plan de estudios, area, asignatura, materias-correlativas,
+
+facultad:
+	id
+	nombre
+regional:
+	id
+	nombre
+	facultad_id	
+carrera: 
+	id 
+	nombre
+	regional_id
+	plan_de_estudios_id
+plan_de_estudios:
+	id
+	ordenanza
+	fecha_inicio
+	fecha_finalizacion
+
+asignatura:
+	id
+	nombre
+	
+	horas_totales
+
+tipo_correlatividad
+	id
+	nombre
+
+asignaturas_correlativas:
+	id
+	asignatura_base_id
+	asignatura_correlativa_id
+	tipo_correlatividad
+regimen:
+	id
+	nombre
+area:
+	id
+	nombre
+materias_plan
+	id
+	horas_semanales
+	creditos
+	plan_estudios_id
+	materia_id
+	regimen
+	area_id
+	regimen_nro
+
+
+
+
+	

@@ -178,3 +178,7 @@ Dentro de los requerimientos tenenos los de **Usuario** (Lo que queremos), y los
     next: diagramas de caso de uso, documentos de requisitos
 
     ## documento de requerimientos
+
+    ## Casos de uso
+
+    Determina como el sistema responde a los determinados inputs del usuario
