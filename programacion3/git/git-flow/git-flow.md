@@ -44,3 +44,16 @@ Reiteracion test: unitarios, itegracion, etc.
 
 - Controla acciones automatizadas
   (paas, dominio, variables de entorno)
+
+## Etapas de git flow
+
+- working directory
+- staging area
+- local repository
+- remote repository
+
+## iaas paas saas
+
+- SaaS (Software as a Service): Ready-to-use applications accessed over the internet (e.g., Gmail, Salesforce).
+- PaaS (Platform as a Service): A platform for developing, running, and managing applications without managing the infrastructure (e.g., AWS Elastic Beanstalk, Google App Engine).
+- IaaS (Infrastructure as a Service): On-demand access to fundamental computing resources like servers and storage (e.g., AWS EC2, Azure VMs).
