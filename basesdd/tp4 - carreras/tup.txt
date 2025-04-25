@@ -1,55 +1,72 @@
-Carreras:
-carrera,plan de estudios, area, asignatura, materias-correlativas,
 
-facultad:
-	id
-	nombre
-regional:
-	id
-	nombre
-	facultad_id	
-carrera: 
-	id 
-	nombre
-	regional_id
-	plan_de_estudios_id
-plan_de_estudios:
-	id
-	ordenanza
-	fecha_inicio
-	fecha_finalizacion
+create table Universidad(
+	id integer not null autoincrement, 
+	nombre varchar(255) not null
+);
 
-asignatura:
-	id
-	nombre
-	
-	horas_totales
+create table Carrera( 
+	id integer not null autoincrement, 
+	nombre varchar(255) not null,
+	descripcion text,
+	horas_totales int not null,
+	universidad_id int not null,
+	foreign key (universidad_id) references Universidad(id)
+);
 
-tipo_correlatividad
-	id
-	nombre
+create table Plan_de_estudios(
+	id integer not null autoincrement,
+	ordenanza int not null check(ordenanza>=1)
+	descripcion text,
+	fecha_inicio text not null,
+	fecha_finalizacion text not null,
+	carrera_id int not null,
+	foreign key (carrera_id)references Carrera(id)
+);
 
-asignaturas_correlativas:
-	id
-	asignatura_base_id
-	asignatura_correlativa_id
-	tipo_correlatividad
-regimen:
-	id
-	nombre
-area:
-	id
-	nombre
-materias_plan
-	id
-	horas_semanales
-	creditos
-	plan_estudios_id
-	materia_id
-	regimen
-	area_id
-	regimen_nro
+create table Asignatura(
+	id integer not null autoincrement,
+	nombre varchar(255) not null,
+	descripcion text,
+);
+create table Tipo_correlatividad(
+	id integer not null autoincrement,
+	nombre varchar(255) not null
+);
 
+
+create table Area(
+	id integer not null autoincrement,
+	nombre varchar(255)
+);
+
+create table
+Asignatura_plan(
+	id integer not null autoincrement,
+	cuatrimestre int not null check(cuatrimestre in (1,2,3,4)),
+	horas_totales int not null check(horas_totales>0);
+	horas_semanales int not null check(horas_semanales>0),
+	creditos int not null check(creditos>0),
+	plan_estudios_id int not null,
+	asignatura_id int not null,
+	area_id int not null,
+	foreign key (plan_estudios_id)
+	references Plan_de_estudios(id),
+	foreign key (asignatura_id)
+	refences Asignatura(id),
+	foreign key (area_id)
+	refences Area(id)
+);
+
+create table asignatura_correlativa(
+	id integer not null autoincrement,
+	asignatura_plan_id int not null,
+	asignatura_correlativa_id int not null,
+	tipo_correlatividad_id int not null,
+	foreign key (asignatura_plan_id)references Asignatura_plan(id),
+	foreign key (asignatura_correlativa_id)references Asignatura_plan(id),
+	foreign key (tipo_correlatividad_id)
+	refences Tipo_correlatividad(id)
+);
 
 
 
