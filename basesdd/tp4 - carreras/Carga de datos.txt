@@ -1,0 +1,136 @@
+-- 1. Insertar en Universidad
+INSERT INTO Universidad (nombre) 
+VALUES ('Universidad Tecnológica Nacional');
+
+-- 2. Insertar en Carrera
+INSERT INTO Carrera (nombre, descripcion, horas_totales, universidad_id) 
+VALUES (
+    'Tecnicatura Universitaria en Programación',
+    'La carrera forma profesionales técnicos para desarrollar e implementar sistemas de información y software, con habilidades en lenguajes de programación, arquitecturas de software y metodologías de desarrollo. Responde a la demanda de programadores en diversos sectores, impulsando la innovación tecnológica y la economía digital.',
+    1375,
+    1
+);
+
+-- 3. Insertar en Plan_de_estudios
+INSERT INTO Plan_de_estudios (ordenanza, descripcion, fecha_inicio, fecha_finalizacion, carrera_id) 
+VALUES (
+    2018,
+    'Plan de estudios actualizado para la Tecnicatura Universitaria en Programación, aprobado por el Consejo Superior de la UTN para adaptarse a las demandas tecnológicas actuales, con énfasis en programación práctica y metodologías ágiles.',
+    '2024-01-01',
+    '2026-12-31',
+    1
+);
+
+-- 4. Insertar en Area
+INSERT INTO Area (nombre) 
+VALUES 
+    ('Ciencias Básicas'),
+    ('Disciplinas Tecnológicas'),
+    ('Disciplinas Complementarias');
+
+-- 5. Insertar en Tipo_correlatividad
+INSERT INTO Tipo_correlatividad (nombre) 
+VALUES 
+    ('Cursada'),
+    ('Aprobada');
+
+-- 6. Insertar en Asignatura
+INSERT INTO Asignatura (nombre, descripcion) 
+VALUES 
+    ('Programación I', 'Introducción a paradigmas de programación, algoritmos, estructuras de datos y resolución de problemas.'),
+    ('Arquitectura y Sistemas Operativos', 'Estudio de la estructura de computadoras, sistemas operativos y virtualización.'),
+    ('Matemática', 'Aplicación de lógica, álgebra y grafos en programación.'),
+    ('Organización Empresarial', 'Fundamentos de gestión empresarial y teoría de sistemas.'),
+    ('Programación II', 'Programación orientada a objetos y consumo de servicios web.'),
+    ('Probabilidad y Estadística', 'Análisis estadístico y probabilidad para toma de decisiones.'),
+    ('Base de Datos I', 'Diseño y gestión de bases de datos relacionales.'),
+    ('Inglés I', 'Competencia comunicativa en inglés técnico para entornos académicos.'),
+    ('Programación III', 'Desarrollo de aplicaciones web basadas en arquitectura cliente-servidor.'),
+    ('Base de Datos II', 'Gestión avanzada de bases de datos, incluyendo NoSQL.'),
+    ('Metodología de Sistemas I', 'Técnicas y herramientas para el desarrollo de software.'),
+    ('Inglés II', 'Competencia avanzada en inglés técnico-científico.'),
+    ('Programación IV', 'Programación web avanzada e integración de APIs.'),
+    ('Metodología de Sistemas II', 'Patrones de diseño y buenas prácticas en desarrollo de software.'),
+    ('Introducción al Análisis de Datos', 'Fundamentos de análisis de datos y modelado.'),
+    ('Legislación', 'Marco jurídico aplicado a la informática y propiedad intelectual.'),
+    ('Gestión de Desarrollo de Software', 'Gestión de proyectos de software y estimación de recursos.'),
+    ('Trabajo Final Integrador', 'Desarrollo de un proyecto de software integrando conocimientos adquiridos.');
+
+-- 7. Insertar en Asignatura_plan
+INSERT INTO Asignatura_plan (cuatrimestre, horas_totales, horas_semanales, creditos, plan_estudios_id, asignatura_id, area_id) 
+VALUES 
+    -- Primer cuatrimestre
+    (1, 128, 8, 13, 1, 1, 2),  -- Programación I (Disciplinas Tecnológicas)
+    (1, 64, 4, 5, 1, 2, 2),   -- Arquitectura y Sistemas Operativos
+    (1, 64, 4, 5, 1, 3, 1),   -- Matemática (Ciencias Básicas)
+    (1, 64, 4, 5, 1, 4, 3),   -- Organización Empresarial (Disciplinas Complementarias)
+    -- Segundo cuatrimestre
+    (2, 128, 8, 13, 1, 5, 2), -- Programación II
+    (2, 64, 4, 5, 1, 6, 1),   -- Probabilidad y Estadística
+    (2, 64, 4, 5, 1, 7, 2),   -- Base de Datos I
+    (2, 64, 4, 5, 1, 8, 3),   -- Inglés I
+    -- Tercer cuatrimestre
+    (3, 128, 8, 13, 1, 9, 2), -- Programación III
+    (3, 64, 4, 5, 1, 10, 2),  -- Base de Datos II
+    (3, 64, 4, 5, 1, 11, 2),  -- Metodología de Sistemas I
+    (3, 64, 4, 5, 1, 12, 3),  -- Inglés II
+    -- Cuarto cuatrimestre
+    (4, 128, 8, 13, 1, 13, 2), -- Programación IV
+    (4, 64, 4, 5, 1, 14, 2),   -- Metodología de Sistemas II
+    (4, 32, 2, 2, 1, 15, 2),   -- Introducción al Análisis de Datos
+    (4, 32, 2, 2, 1, 16, 3),   -- Legislación
+    (4, 64, 4, 5, 1, 17, 2),   -- Gestión de Desarrollo de Software
+    (4, 95, 6, 9, 1, 18, 2);   -- Trabajo Final Integrador (estimé 6 horas semanales para 95 horas en 16 semanas)
+
+-- 8. Insertar en Asignatura_correlativa
+INSERT INTO Asignatura_correlativa (asignatura_plan_id, asignatura_correlativa_id, tipo_correlatividad_id) 
+VALUES 
+    -- Programación II (ID 5): Requiere Programación I (ID 1) y Arquitectura (ID 2) cursadas
+    (5, 1, 1), -- Programación I cursada
+    (5, 2, 1), -- Arquitectura cursada
+    -- Probabilidad y Estadística (ID 6): Requiere Matemática (ID 3) cursada
+    (6, 3, 1),
+    -- Base de Datos I (ID 7): Requiere Programación I (ID 1) y Matemática (ID 3) cursadas
+    (7, 1, 1),
+    (7, 3, 1),
+    -- Programación III (ID 9): Requiere Programación II (ID 5) y Base de Datos I (ID 7) cursadas, Programación I (ID 1) aprobada
+    (9, 5, 1),
+    (9, 7, 1),
+    (9, 1, 2),
+    -- Base de Datos II (ID 10): Requiere Base de Datos I (ID 7) cursada, Programación I (ID 1) aprobada
+    (10, 7, 1),
+    (10, 1, 2),
+    -- Metodología de Sistemas I (ID 11): Requiere Programación II (ID 5) y Base de Datos I (ID 7) cursadas, Programación I (ID 1) y Organización Empresarial (ID 4) aprobadas
+    (11, 5, 1),
+    (11, 7, 1),
+    (11, 1, 2),
+    (11, 4, 2),
+    -- Inglés II (ID 12): Requiere Inglés I (ID 8) cursada
+    (12, 8, 1),
+    -- Programación IV (ID 13): Requiere Programación III (ID 9), Base de Datos II (ID 10) y Metodología de Sistemas I (ID 11) cursadas, Programación II (ID 5) y Base de Datos I (ID 7) aprobadas
+    (13, 9, 1),
+    (13, 10, 1),
+    (13, 11, 1),
+    (13, 5, 2),
+    (13, 7, 2),
+    -- Metodología de Sistemas II (ID 14): Requiere Metodología de Sistemas I (ID 11) cursada, Organización Empresarial (ID 4) aprobada
+    (14, 11, 1),
+    (14, 4, 2),
+    -- Introducción al Análisis de Datos (ID 15): Requiere Base de Datos II (ID 10) cursada, Probabilidad y Estadística (ID 6) y Base de Datos I (ID 7) aprobadas
+    (15, 10, 1),
+    (15, 6, 2),
+    (15, 7, 2),
+    -- Legislación (ID 16): Requiere Base de Datos I (ID 7) cursada, Organización Empresarial (ID 4) aprobada
+    (16, 7, 1),
+    (16, 4, 2),
+    -- Gestión de Desarrollo de Software (ID 17): Requiere Programación III (ID 9) y Base de Datos II (ID 10) cursadas, Programación II (ID 5) y Base de Datos I (ID 7) aprobadas
+    (17, 9, 1),
+    (17, 10, 1),
+    (17, 5, 2),
+    (17, 7, 2),
+    -- Trabajo Final Integrador (ID 18): Requiere Inglés I (ID 8), Programación III (ID 9), Base de Datos II (ID 10), Metodología de Sistemas I (ID 11) e Inglés II (ID 12) cursadas
+    (18, 8, 1),
+    (18, 9, 1),
+    (18, 10, 1),
+    (18, 11, 1),
+    (18, 12, 1);

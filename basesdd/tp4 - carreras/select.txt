@@ -1,0 +1,24 @@
+select p.nombre as "Nombre del plan", a.nombre "Materia", 
+n.numero as Nivel, c.numero as "Cuatrimestre", 
+a.horassemana as "hs Semanales", a.horascuatrimestre as "hs Totales", a.creditos
+	from MateriasPlan mp 
+	inner join Plan p 
+	on p.id = mp.plan_id
+	inner join Asignatura a 
+	on mp.asignatura_id = a.id
+	inner join Nivel n
+	on n.id = mp.nivel_id
+	inner join Cuatrimestre c
+	on c.numero = mp.cuatrimestre_id;
+-- creditos por area
+select ar.nombre, sum(a.creditos) as "Creditos por area" from Asignatura a
+	inner join MateriasPlan mp
+	on mp.asignatura_id = a.id 
+	inner join Area ar
+	on ar.id = a.area_id
+	group by ar.nombre;
+
+
+
+-- crear Profesor Alumno Evaluacion
+	 Persona
