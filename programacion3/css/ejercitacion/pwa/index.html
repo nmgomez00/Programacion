@@ -4,15 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="src/styles/index.css">
+    <link rel="stylesheet" href="src/styles/header.css">
+    <link rel="stylesheet" href="src/styles/footer.css">
     <title>Inicio</title>
 </head>
 
 <body>
     <header>
-        <img src="src/logo.png" alt="" class="logo">
-
-        <img src="src/menu-icon.png" alt="" class="menu-button">
+        <img src="src/images/logo.png" alt="" class="logo">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="src/pages/marketing.html">Marketing</a></li>
+                <li><a href="src/pages/diseño.html">Diseño</a></li>
+                <li><a href="src/pages/web.html">Web</a></li>
+                <li><a href="src/pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="menu-button-container">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
     </header>
     <main>
         <section class="banner">
@@ -24,25 +38,35 @@
             <div class="card">
                 <h3>Marketing Digital</h3>
                 <p>Estrategias efectivas para posicionar la marca</p>
-                <a href="">ver más</a>
+                <a href="src/pages/marketing.html" class="services-anchor">ver más</a>
             </div>
             <div class="card">
                 <h3>Diseño Grafico</h3>
                 <p>Comunicacion visual con impacto</p>
-                <a href="">ver más</a>
+                <a href="src/pages/diseño.html" class="services-anchor">ver más</a>
             </div>
             <div class="card">
                 <h3>Desarrollo Web</h3>
                 <p>Sitios a medida optimizados para resultados</p>
-                <a href="">ver más</a>
+                <a href="src/pages/web.html" class="services-anchor">ver más</a>
+            </div>
+
+        </section>
+        <section class="trusted-companies">
+            <h2>Empresas que confían en nosotros</h2>
+            <div class="companies">
+                <div class="company-logo"></div>
+                <div class="company-logo"></div>
+                <div class="company-logo"></div>
+                <div class="company-logo"></div>
+                <div class="company-logo"></div>
+                <div class="company-logo"></div>
+
             </div>
         </section>
     </main>
     <footer>
-        <div class="footer-card"></div>
-        <div class="footer-card"></div>
-        <div class="footer-card"></div>
-        <div class="footer-card"></div>
+        &copy; 2025 Servicios Digitales. Todos los derechos reservados.
     </footer>
 </body>
 

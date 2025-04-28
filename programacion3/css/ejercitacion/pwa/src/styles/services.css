@@ -1,0 +1,105 @@
+@import url("globals.css");
+/*Estilos generales*/
+body {
+  margin: 0 auto;
+  background-color: var(--color-background);
+  font-family: var(--font-text);
+  color: white;
+}
+li {
+  list-style: none;
+}
+h2 {
+  margin: 0;
+}
+/* Estilos del Header */
+.banner {
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary) 0%,
+    var(--color-primary-light) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 50px 0px;
+}
+.banner-title {
+  font-weight: bold;
+  text-align: center;
+}
+/*seccion beneficios*/
+.benefits-list {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.benefits-list > li {
+  padding: 15px;
+  background-color: var(--color-surface-2);
+  border-radius: 10px;
+}
+/*Nuestro equipo*/
+.user-list {
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  gap: 25px;
+}
+.user-list > li {
+  padding: 5px;
+
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5px;
+}
+.user-list > li > .profile-img-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-surface-2);
+}
+.user-list > li > span {
+  font-weight: bold;
+}
+.technologies-list {
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+.technologies-list > li {
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  background-color: var(--color-surface-2);
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  font-size: small;
+}
+.button-get-service {
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary) 0%,
+    var(--color-primary-light) 100%
+  );
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}

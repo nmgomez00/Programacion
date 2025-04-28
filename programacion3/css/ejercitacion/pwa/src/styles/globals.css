@@ -1,0 +1,10 @@
+:root {
+  --color-primary: #6d28d9;
+  --color-primary-light: #8b5cf6;
+  --color-secondary: #10b982;
+  --color-accent: #f59e0b;
+  --color-background: #121212;
+  --color-surface: #1e1e1e;
+  --color-surface-2: #2d2d2d;
+  --font-text: "inter"; /*bold for titles, regular for text, medium for htext*/
+}

@@ -1,0 +1,6 @@
+@import url("globals.css");
+
+.banner {
+  background-image: none;
+  background-color: var(--color-accent);
+}
