@@ -1,16 +1,14 @@
 @import url(./globals.css);
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 body {
   margin: 0 auto;
   background-color: var(--color-background);
   font-family: var(--font-text);
   color: white;
 }
-/*Estilos del Header*/
+h2,h3{
+  margin:0 0;
+}
 
 /*
 Estilos del banner
@@ -68,16 +66,13 @@ Estilos del banner
   color: white;
 }
 .trusted-companies {
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 .companies {
-  width: 100%;
   background-color: var(--color-surface-2);
   display: flex;
-  justify-content: center;
   gap: 10px;
   padding: 10px;
   border-radius: 10px;
@@ -99,5 +94,42 @@ Estilos del banner
   border-radius: 10px;
   padding: 15px 35px;
   margin: 10px;
+  list-style: none;
 }
-/*Estilos del footer*/
+@media (max-width: 375px){
+  .services {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .services-title {
+    font-size: 1.5rem;
+  }
+  .trusted-companies {
+    gap: 10px;
+  }
+  .companies {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media (min-width: 376px) and (max-width: 1440px){
+
+  .services-l{
+    flex-direction: row;
+    gap: 10px;
+  }
+  .services-title {
+    font-size: 1.5rem;
+  }
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  .comanies{
+    justify-content:flex-start;
+  }
+  
+
+}

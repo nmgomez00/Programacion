@@ -35,7 +35,6 @@ h2 {
 .benefits-list {
   padding: 0;
   display: flex;
-  flex-direction: column;
   gap: 20px;
 }
 .benefits-list > li {
@@ -102,4 +101,62 @@ h2 {
   color: white;
   font-weight: bold;
   cursor: pointer;
+}
+@media (max-width: 375px){
+  .benefits-list{
+    flex-direction: column;
+  }
+  .user-list{
+    flex-direction: row;
+    
+  }
+}
+@media (min-width: 376px) and (max-width: 1440px){
+  .benefits-list{
+    flex-direction: row;
+  }
+  main{
+    display:grid;
+    grid-template-areas:
+    "banner banner banner"
+    "description description users"
+    "benefits benefits users"
+    "technologies technologies users"
+    "button button button";
+  }
+  .banner{
+    grid-area: banner;
+    width:100%;
+  }
+  .paragraph-description{
+    grid-area:description;
+    width: fit-content;
+  }
+  .benefits{
+    grid-area:benefits;
+    width: fit-content;
+  }
+  .benefits-list > li {
+    height:100px;
+  }
+  .users{
+    grid-area:users;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .user-list{
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content: center;
+    gap: 0px;
+  }
+  .technologies{
+    grid-area:technologies;
+  }
+  .button-get-service{
+    grid-area:button;
+  }
+
 }
