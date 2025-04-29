@@ -182,3 +182,6 @@ Dentro de los requerimientos tenenos los de **Usuario** (Lo que queremos), y los
     ## Casos de uso
 
     Determina como el sistema responde a los determinados inputs del usuario
+
+    - opcion es extension
+    - obligatorio es inclusion
