@@ -1,0 +1,135 @@
+@import url(./globals.css);
+
+body {
+  margin: 0 auto;
+  background-color: var(--color-background);
+  font-family: var(--font-text);
+  color: white;
+}
+h2,h3{
+  margin:0 0;
+}
+
+/*
+Estilos del banner
+*/
+.banner {
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary) 0%,
+    var(--color-primary-light) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 50px 0px;
+}
+.banner-title {
+  font-weight: bold;
+  text-align: center;
+}
+.banner-button {
+  all: unset;
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  border-radius: 10px;
+  border: 1px solid var(--color-primary-light);
+  padding: 10px 15px;
+  margin: 10px;
+  text-align: center;
+}
+
+/*Estilos de las secciones del main*/
+.services {
+  display: flex;
+  flex-direction: column;
+}
+.services-title {
+  font-weight: bold;
+}
+.card {
+  background-color: var(--color-surface-2);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.card p {
+  color: #b4b4b4;
+}
+.services-anchor {
+  text-decoration: underline;
+  color: white;
+}
+.trusted-companies {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.companies {
+  background-color: var(--color-surface-2);
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+
+  /*para que scrollee hacia los lados y no se vea el scroll bar*/
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-color: var(--color-primary) var(--color-surface-2);
+
+  -ms-overflow-style: none; /* IE y Edge */
+
+  scrollbar-width: none; /* Para Firefox */
+  &::-webkit-scrollbar {
+    display: none; /*Para Chrome, Safari, y Opera */
+  }
+}
+.company-logo {
+  background-color: rgb(92, 92, 92);
+  border-radius: 10px;
+  padding: 15px 35px;
+  margin: 10px;
+  list-style: none;
+}
+@media (max-width: 375px){
+  .services {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .services-title {
+    font-size: 1.5rem;
+  }
+  .trusted-companies {
+    gap: 10px;
+  }
+  .companies {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media (min-width: 376px) and (max-width: 1440px){
+
+  .services-l{
+    flex-direction: row;
+    gap: 10px;
+  }
+  .services-title {
+    font-size: 1.5rem;
+  }
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  .comanies{
+    justify-content:flex-start;
+  }
+  
+
+}

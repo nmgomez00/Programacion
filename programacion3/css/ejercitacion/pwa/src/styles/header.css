@@ -1,0 +1,70 @@
+@import url("globals.css");
+header {
+  background-color: var(--color-surface);
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: fit-content;
+  position: sticky;
+  top: 0%;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.nav-list > li {
+  width: 100%;
+  border-radius: 5px;
+  margin: 0 5px;
+  list-style: none;
+}
+.nav-list > li > a {
+  text-decoration: none;
+  color: white;
+}
+.menu-button-container {
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.menu-button-container > span {
+  width: 100%;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: white;
+}
+/*Estilos del main*/
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+@media (max-width: 375px){
+  .nav-list {
+    display: none;
+  }
+  .menu-button-container {
+    display: flex;
+  }
+}
+@media (min-width: 376px) and (max-width: 1440px){
+  header {
+    gap: 10px;
+    position:relative;
+  }
+  .nav-list {
+    display: flex;
+    gap: 10px;
+  }
+  .menu-button-container {
+    display: none;
+  }
+}

@@ -1,0 +1,95 @@
+@import url("globals.css");
+/*Estilos generales*/
+body {
+  margin: 0 auto;
+  background-color: var(--color-background);
+  font-family: var(--font-text);
+  color: white;
+}
+.contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+.contacto > h2,
+p {
+  margin: 0;
+}
+form {
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--color-surface-2);
+}
+
+form > input,
+select,
+textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--color-background);
+}
+form > select {
+  color: white;
+}
+form > button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary) 0%,
+    var(--color-primary-light) 100%
+  );
+  color: white;
+  font-weight: bold;
+}
+/*seccion info adicional*/
+.aditional-information {
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: var(--color-surface-2);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.aditional-information > h3 {
+  margin: 0;
+}
+.aditional-information > address {
+  margin-top: 0;
+}
+.aditional-information > address > a {
+  text-decoration: none;
+  color: white;
+}
+
+.map {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-surface-2);
+}
+
+@media (max-width: 375px){
+}
+@media (min-width: 376px) and (max-width: 1440px){
+  main > *{
+    width: 375px;
+    margin: 0 auto;
+  }
+}
