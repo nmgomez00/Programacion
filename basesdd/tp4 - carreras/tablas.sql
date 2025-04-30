@@ -1,25 +1,25 @@
 create table Institucion (
-	id integer not null primary key autoincrement, 
+	id integer not null primary key identity(1,1), 
 	nombre  varchar(256) not null unique,
 	domicilio varchar(256));
 
 create table Carrera (
-	id integer not null primary key autoincrement, 
+	id integer not null primary key identity(1,1), 
 	institucion_id integer not null,
 	nombre  varchar(256) not null unique,
 	duracion integer not null,
 	foreign key (institucion_id) references  Institucion(id));
 
 create table Regimen (
-	id integer not null primary key autoincrement, 
+	id integer not null primary key identity(1,1), 
 	nombre  varchar(256) not null unique);
 
 create table Area (
-	id integer not null primary key autoincrement, 
+	id integer not null primary key identity(1,1), 
 	nombre  varchar(256) not null unique);
 
 create table Plan (
-	id integer not null primary key autoincrement, 
+	id integer not null primary key identity(1,1), 
 	nombre  varchar(256) not null unique,
 	carrera_id integer not null,
 	fecha_inicio datetime not null,
@@ -27,17 +27,17 @@ create table Plan (
 	foreign key (carrera_id) references Carrera(id));
 
 create table Cuatrimestre (
-	id integer not null primary key autoincrement, 
+	id integer not null primary key identity(1,1), 
 	numero integer not null check (numero >= 0),
 	descripcion varchar(128) not null);
 
 create table Nivel (
-	id integer not null primary key autoincrement, 
+	id integer not null primary key identity(1,1), 
 	numero integer not null check (numero >= 0),
 	descripcion varchar(128) not null);
 
 create table Asignatura(
-	id integer not null primary key autoincrement, 
+	id integer not null primary key identity(1,1), 
 	area_id integer not null,
 	regimen_id integer not null,
 	nombre varchar(256) not null,
@@ -48,7 +48,7 @@ create table Asignatura(
 	foreign key (regimen_id) references Regimen(id));
 
 create table MateriasPlan(
-	id integer not null primary key autoincrement,
+	id integer not null primary key identity(1,1),
 	plan_id integer not null,
 	asignatura_id integer,
 	nivel_id integer not null,
@@ -59,9 +59,15 @@ create table MateriasPlan(
 	Foreign Key(cuatrimestre_id) references Cuatrimestre(id));
 
 create table Correlativas(
-	id integer not null primary key autoincrement,
+	id integer not null primary key identity(1,1),
 	materia_id integer not null,
 	correlativa_id integer not null check (correlativa_id != materia_id),
 	foreign key (materia_id) references Materia(id),
 	foreign key (correlativa_id) references Materia(id));
 
+create table Persona(
+	id integer not null primary key identity(1,1),
+	nombre varchar(256) not null,
+	apellido varchar(256) not null,
+	dni int not null
+	);
