@@ -1,0 +1,54 @@
+select p.nombre as "Nombre del plan", a.nombre "Materia", 
+n.numero as Nivel, c.numero as "Cuatrimestre", 
+a.horassemana as "hs Semanales", a.horascuatrimestre as "hs Totales", a.creditos
+	from MateriasPlan mp 
+	inner join Plan p 
+	on p.id = mp.plan_id
+	inner join Asignatura a 
+	on mp.asignatura_id = a.id
+	inner join Nivel n
+	on n.id = mp.nivel_id
+	inner join Cuatrimestre c
+	on c.numero = mp.cuatrimestre_id;
+-- creditos por area
+select ar.nombre, sum(a.creditos) as "Creditos por area" from Asignatura a
+	inner join MateriasPlan mp
+	on mp.asignatura_id = a.id 
+	inner join Area ar
+	on ar.id = a.area_id
+	group by ar.nombre;
+
+
+
+-- crear Profesor Alumno Evaluacion
+	 Persona
+	 
+create table Persona(
+	id integer not null primary key autoincrement,
+	nombre varchar(256) not null,
+	apellido varchar(256) not null,
+	dni int not null
+	);
+	
+create table Profesor(
+	id integer not null primary key autoincrement,
+	persona_id int not null,
+	legajo varchar(256) not null),
+	Foreign Key (persona_id) references Persona(id));
+	
+create table ProfesorMateria(
+	id integer not null primary key autoincrement,
+	profesor_id int not null,
+	asignatura_id int not null,
+	Foreign Key(asignatura_id) references Asignatura(id),
+	Foreign Key(profesor_id) references Profesor(id))):
+	
+create table Alumno(
+	id integer not null primary key autoincrement,
+	legajo varchar(256) not null,
+	persona_id int not null,
+	carrera_id int not null,
+	Foreign Key (persona_id) references Persona(id),
+	foreign key (carrera_id) references Carrera(id))
+	);
+
