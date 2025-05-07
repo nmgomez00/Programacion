@@ -182,6 +182,18 @@ Dentro de los requerimientos tenenos los de **Usuario** (Lo que queremos), y los
     ## Casos de uso
 
     Determina como el sistema responde a los determinados inputs del usuario
+    Define la interacción entre el actor (el mismo sistema, otro sistema y el usuario) y el sistema
+    Se usa para refinar los requerimientos
 
     - opcion es extension
     - obligatorio es inclusion
+
+### Descripcion de los casos de uso
+
+- Preconcicion: Cosas necesarias para que suceda.
+- Condicion: que debes hacer para que se dispare el caso de uso.
+
+---
+
+En los sitemas el curso basico es el camino feliz, el camino alternativo es lo que escapa al camino feliz
+Dentro de los alternativos poseen o no solucion (no estabas logueado o el servidor no encontro los datos)

@@ -25,10 +25,9 @@ select ar.nombre, sum(a.creditos) as "Creditos por area" from Asignatura a
 	 
 create table Persona(
 	id integer not null primary key autoincrement,
-	nombre varchar(256) not null,
-	apellido varchar(256) not null,
-	dni int not null
-	);
+	apellido varchar(64) not null,
+	nombre varchar(64) not null,
+	dni integer not null unique);
 	
 create table Profesor(
 	id integer not null primary key autoincrement,
