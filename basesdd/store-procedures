@@ -1,0 +1,125 @@
+Exec GenInsert 'Evaluacion';
+drop procedure I_Evaluacion;
+select * from evaluacion;
+select * from Asignatura;
+CREATE FUNCTION dbo.GetIdByName
+(
+    @TableName NVARCHAR(128),
+    @Name NVARCHAR(100)
+)
+RETURNS INT
+AS
+BEGIN
+    DECLARE @Id INT
+    DECLARE @Sql NVARCHAR(500)
+    
+    -- Construct dynamic SQL query with proper quoting to prevent SQL injection
+    SET @Sql = N'SELECT @Id = Id FROM ' + QUOTENAME(@TableName) + N' WHERE Nombre = @Name'
+    
+    -- Execute dynamic SQL with parameterized query
+    EXEC sp_executesql @Sql, 
+        N'@Name NVARCHAR(100), @Id INT OUTPUT', 
+        @Name, 
+        @Id OUTPUT
+    
+    -- Return 0 if no matching record found
+    RETURN ISNULL(@Id, 0)
+END
+select dbo.getIdByName('Asignatura', 'Programacion I');
+
+
+
+select * from TipoEvaluacion;
+
+declare @id int;
+exec I_evaluacion @id out, select
+
+
+CREATE PROCEDURE I_Evaluacion
+    @ID INT OUTPUT
+   ,@TIPOEVALUACION_ID INT
+   ,@MATERIAPLAN_ID INT
+   ,@FECHA DATETIME
+   ,@APROBADA_SN CHAR(1)
+   ,@CALIFICACION FLOAT
+   ,@ALUMNO_ID INT
+AS
+BEGIN
+  BEGIN TRY
+    INSERT INTO Evaluacion
+    (TIPOEVALUACION_ID ,MATERIAPLAN_ID ,FECHA ,APROBADA_SN ,CALIFICACION ,ALUMNO_ID)
+    VALUES
+    (@TIPOEVALUACION_ID ,@MATERIAPLAN_ID ,@FECHA ,@APROBADA_SN ,@CALIFICACION ,@ALUMNO_ID)
+     SET @ID = @@IDENTITY
+  END TRY
+  BEGIN CATCH
+     EXECUTE GetErrorInfo
+  END CATCH
+END;
+
+Exec GenInsert 'Evaluacion';
+
+select * from Alumno;
+select * from Persona;
+select * from PlanEstudio;
+declare @Id int
+Exec I_Alumno @id out,31,1,17852;
+
+alter table Evaluacion 
+add alumno_id int not null
+
+
+alter table Evaluacion 
+add constraint FK_alumno
+foreign key (alumno_id) references Persona(id );
+
+CREATE PROCEDURE I_Alumno
+    @ID INT OUTPUT
+   ,@PERSONA_ID INT
+   ,@PLANESTUDIO_ID INT
+   ,@LEGAJO INT
+AS
+BEGIN
+  BEGIN TRY
+    INSERT INTO Alumno
+    (PERSONA_ID ,PLANESTUDIO_ID ,LEGAJO)
+    VALUES
+    (@PERSONA_ID ,@PLANESTUDIO_ID ,@LEGAJO)
+     SET @ID = @@IDENTITY
+  END TRY
+  BEGIN CATCH
+     EXECUTE GetErrorInfo
+  END CATCH
+END;
+select * from Evaluacion;
+select * from Asignatura;
+select * from Alumno;
+Select * from Persona;
+Alter table Evaluacion
+add Alumno_id
+
+select * from m.MateriasPlan inner join Materia where asignatura;
+
+declare @Id int;
+Exec I_Evaluacion @id out,'1';
+
+CREATE PROCEDURE I_Evaluacion
+    @ID INT OUTPUT
+   ,@TIPOEVALUACION_ID INT
+   ,@MATERIAPLAN_ID INT
+   ,@FECHA DATETIME
+   ,@APROBADA_SN CHAR(1)
+   ,@CALIFICACION FLOAT
+AS
+BEGIN
+  BEGIN TRY
+    INSERT INTO Evaluacion
+    (TIPOEVALUACION_ID ,MATERIAPLAN_ID ,FECHA ,APROBADA_SN ,CALIFICACION)
+    VALUES
+    (@TIPOEVALUACION_ID ,@MATERIAPLAN_ID ,@FECHA ,@APROBADA_SN ,@CALIFICACION)
+     SET @ID = @@IDENTITY
+  END TRY
+  BEGIN CATCH
+     EXECUTE GetErrorInfo
+  END CATCH
+END;
