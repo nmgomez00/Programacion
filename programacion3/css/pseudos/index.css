@@ -97,7 +97,7 @@ button::after {
   background-color: #000;
   padding: 2px 6px;
   position: absolute;
-  transform: translateY(-140%);
+  transform: translate(-140%);
   border-radius: 5px 5px 5px 0;
   display: none;
 }
