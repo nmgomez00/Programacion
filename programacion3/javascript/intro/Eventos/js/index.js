@@ -95,7 +95,7 @@ const precioTotal = productosConDescuento.reduce((acumulador, producto) => {
 });
 
 //cuando retorno un objeto tengo que usar () para que no lo tome como un bloque de codigo en una funcion flecha
-const generarCards = (productos) => {
+const generarCards = (producto) => {
   producto.map((Producto) => {
     const precioFinal = calcularPrecioFinal(
       Producto.precio,
@@ -116,6 +116,7 @@ const contenedorEl = document.getElementById("product-container");
 
 const cards = generarCards(productosConDescuento);
 
-cards.forEach((card) => {
+//contenedorEl.append(...cards);
+cards.forEach((cards) => {
   contenedorEl.appendChild(card);
 });
