@@ -1,0 +1,13 @@
+.oscuro {
+  background-color: #333;
+}
+textarea {
+  display: block;
+  margin-top: 1rem;
+}
+.rojo {
+  color: red;
+}
+.oculto {
+  display: hidden;
+}
