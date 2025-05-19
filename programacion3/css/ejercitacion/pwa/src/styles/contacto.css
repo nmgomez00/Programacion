@@ -1,11 +1,4 @@
 @import url("globals.css");
-/*Estilos generales*/
-body {
-  margin: 0 auto;
-  background-color: var(--color-background);
-  font-family: var(--font-text);
-  color: white;
-}
 .contacto {
   display: flex;
   flex-direction: column;
@@ -87,9 +80,11 @@ form > button {
 
 @media (max-width: 375px){
 }
-@media (min-width: 376px) and (max-width: 1440px){
+@media (min-width: 376px) and (max-width: 450px){
+ 
+}
+@media (min-width: 451px) and (max-width: 1440px){
   main > *{
-    width: 375px;
     margin: 0 auto;
   }
 }
