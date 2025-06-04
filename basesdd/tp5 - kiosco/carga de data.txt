@@ -1,0 +1,141 @@
+-- Mock data insertion script for the system
+-- Ensure stored procedures (I_*, U_*, D_*) are already created for all tables
+
+-- 1. Insert into TipoProducto
+DECLARE @ID_TipoProducto1 INT, @ID_TipoProducto2 INT;
+EXEC I_TipoProducto @nombre = 'Electrónica', @ID = @ID_TipoProducto1 OUTPUT;
+EXEC I_TipoProducto @nombre = 'Ropa', @ID = @ID_TipoProducto2 OUTPUT;
+
+-- 2. Insert into Producto
+DECLARE @ID_Producto1 INT, @ID_Producto2 INT, @ID_Producto3 INT;
+EXEC I_Producto 
+    @tipoProducto_id = @ID_TipoProducto1, 
+    @nombre = 'Smartphone XYZ', 
+    @nombreTKT = 'Smartphone XYZ TKT', 
+    @activo_sn = 'S', 
+    @ID = @ID_Producto1 OUTPUT;
+EXEC I_Producto 
+    @tipoProducto_id = @ID_TipoProducto1, 
+    @nombre = 'Laptop ABC', 
+    @nombreTKT = 'Laptop ABC TKT', 
+    @activo_sn = 'S', 
+    @ID = @ID_Producto2 OUTPUT;
+EXEC I_Producto 
+    @tipoProducto_id = @ID_TipoProducto2, 
+    @nombre = 'Camiseta Básica', 
+    @nombreTKT = 'Camiseta Básica TKT', 
+    @activo_sn = 'S', 
+    @ID = @ID_Producto3 OUTPUT;
+
+-- 3. Insert into Proveedor
+DECLARE @ID_Proveedor1 INT, @ID_Proveedor2 INT;
+EXEC I_Proveedor 
+    @razonSocial = 'TechCorp S.A.', 
+    @cuit = 123456789, 
+    @ID = @ID_Proveedor1 OUTPUT;
+EXEC I_Proveedor 
+    @razonSocial = 'ModaGlobal S.R.L.', 
+    @cuit = 987654321, 
+    @ID = @ID_Proveedor2 OUTPUT;
+
+-- 4. Insert into ProductoProveedor
+DECLARE @ID_ProductoProveedor1 INT, @ID_ProductoProveedor2 INT, @ID_ProductoProveedor3 INT;
+EXEC I_ProductoProveedor 
+    @proveedor_id = @ID_Proveedor1, 
+    @producto_id = @ID_Producto1, 
+    @precioUnitario = 500, 
+    @ganancia = 100, 
+    @ID = @ID_ProductoProveedor1 OUTPUT;
+EXEC I_ProductoProveedor 
+    @proveedor_id = @ID_Proveedor1, 
+    @producto_id = @ID_Producto2, 
+    @precioUnitario = 1200, 
+    @ganancia = 300, 
+    @ID = @ID_ProductoProveedor2 OUTPUT;
+EXEC I_ProductoProveedor 
+    @proveedor_id = @ID_Proveedor2, 
+    @producto_id = @ID_Producto3, 
+    @precioUnitario = 25, 
+    @ganancia = 5, 
+    @ID = @ID_ProductoProveedor3 OUTPUT;
+
+-- 5. Insert into Stock
+DECLARE @ID_Stock1 INT, @ID_Stock2 INT, @ID_Stock3 INT;
+EXEC I_Stock 
+    @productoProveedor_id = @ID_ProductoProveedor1, 
+    @cantidadMinima = 10, 
+    @cantidadActual = 50, 
+    @ID = @ID_Stock1 OUTPUT;
+EXEC I_Stock 
+    @productoProveedor_id = @ID_ProductoProveedor2, 
+    @cantidadMinima = 5, 
+    @cantidadActual = 20, 
+    @ID = @ID_Stock2 OUTPUT;
+EXEC I_Stock 
+    @productoProveedor_id = @ID_ProductoProveedor3, 
+    @cantidadMinima = 20, 
+    @cantidadActual = 100, 
+    @ID = @ID_Stock3 OUTPUT;
+
+-- 6. Insert into HistoricoPrecio
+DECLARE @ID_HistoricoPrecio1 INT, @ID_HistoricoPrecio2 INT;
+EXEC I_HistoricoPrecio 
+    @productoProveedor_id = @ID_ProductoProveedor1, 
+    @ganancia = 100, 
+    @fecha = '2025-06-01 10:00:00', 
+    @ID = @ID_HistoricoPrecio1 OUTPUT;
+EXEC I_HistoricoPrecio 
+    @productoProveedor_id = @ID_ProductoProveedor2, 
+    @ganancia = 300, 
+    @fecha = '2025-06-02 12:00:00', 
+    @ID = @ID_HistoricoPrecio2 OUTPUT;
+
+-- 7. Insert into Compras
+DECLARE @ID_Compra1 INT, @ID_Compra2 INT;
+EXEC I_Compras 
+    @productoProveedor_id = @ID_ProductoProveedor1, 
+    @fecha = '2025-06-03 09:00:00', 
+    @cantidad = 30, 
+    @ID = @ID_Compra1 OUTPUT;
+EXEC I_Compras 
+    @productoProveedor_id = @ID_ProductoProveedor3, 
+    @fecha = '2025-06-03 15:00:00', 
+    @cantidad = 50, 
+    @ID = @ID_Compra2 OUTPUT;
+
+-- 8. Insert into Comercio
+DECLARE @ID_Comercio1 INT;
+EXEC I_Comercio 
+    @razonSocial = 'Tienda Central', 
+    @cuit = 111222333, 
+    @ID = @ID_Comercio1 OUTPUT;
+
+-- 9. Insert into CabeceraTicket
+DECLARE @ID_CabeceraTicket1 INT;
+EXEC I_CabeceraTicket 
+    @comercio_id = @ID_Comercio1, 
+    @fecha = '2025-06-04 10:30:00', 
+    @ID = @ID_CabeceraTicket1 OUTPUT;
+
+-- 10. Insert into ItemTicket
+DECLARE @ID_ItemTicket1 INT, @ID_ItemTicket2 INT;
+EXEC I_ItemTicket 
+    @cabeceraTicket_id = @ID_CabeceraTicket1, 
+    @productoProveedor_id = @ID_ProductoProveedor1, 
+    @ID = @ID_ItemTicket1 OUTPUT;
+EXEC I_ItemTicket 
+    @cabeceraTicket_id = @ID_CabeceraTicket1, 
+    @productoProveedor_id = @ID_ProductoProveedor3, 
+    @ID = @ID_ItemTicket2 OUTPUT;
+
+-- Optional: Select statements to verify inserted data
+SELECT * FROM TipoProducto;
+SELECT * FROM Producto;
+SELECT * FROM Proveedor;
+SELECT * FROM ProductoProveedor;
+SELECT * FROM Stock;
+SELECT * FROM HistoricoPrecio;
+SELECT * FROM Compras;
+SELECT * FROM Comercio;
+SELECT * FROM CabeceraTicket;
+SELECT * FROM ItemTicket;

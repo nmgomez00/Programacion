@@ -197,3 +197,9 @@ Dentro de los requerimientos tenenos los de **Usuario** (Lo que queremos), y los
 
 En los sitemas el curso basico es el camino feliz, el camino alternativo es lo que escapa al camino feliz
 Dentro de los alternativos poseen o no solucion (no estabas logueado o el servidor no encontro los datos)
+
+#
+
+crear un producto que revolucione la industria de los que les gusta tomar café
+restricciones: enfocado para gente de la tercera edad y 100% ecologico
+portatil y se debe utilizar en paises donde no hay electricidad
