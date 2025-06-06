@@ -42,19 +42,15 @@ textAreaEl.addEventListener("input", () => {
 const buscadorEl = document.getElementById("buscador");
 const itemsEl = document.querySelectorAll(".nombre li");
 const listEl = document.querySelector(".nombre");
-console.log(itemsEl);
 const nombres = [...itemsEl].map((item) => {
   return item.innerText;
 });
-
-console.log(nombres);
 
 buscadorEl.addEventListener("input", () => {
   const texto = buscadorEl.value.toLowerCase();
   const lista = nombres.filter((item) => {
     return item.toLowerCase().includes(texto);
   });
-  console.log(lista);
   listEl.innerHTML = "";
   lista.forEach((item) => {
     const li = document.createElement("li");
@@ -90,13 +86,14 @@ const productosConDescuento = [
 const calcularPrecioFinal = (precio, descuento) => {
   return precio - (precio * descuento) / 100;
 };
+/*
 const precioTotal = productosConDescuento.reduce((acumulador, producto) => {
   return acumulador + calcularPrecioFinal(producto.precio, producto.descuento);
 });
-
+*/
 //cuando retorno un objeto tengo que usar () para que no lo tome como un bloque de codigo en una funcion flecha
-const generarCards = (producto) => {
-  producto.map((Producto) => {
+const generarCards = (productos) => {
+  return productos.map((Producto) => {
     const precioFinal = calcularPrecioFinal(
       Producto.precio,
       Producto.descuento
@@ -104,7 +101,7 @@ const generarCards = (producto) => {
     const card = document.createElement("div");
 
     card.innerHTML = ` 
-    <h3>${Producto.titulo}</h3>
+    <h3>${Producto.nombre}</h3>
     <p>${Producto.precio}</p>
     <p>${Producto.descuento}</p>
     <span>${precioFinal}</span>
@@ -116,7 +113,14 @@ const contenedorEl = document.getElementById("product-container");
 
 const cards = generarCards(productosConDescuento);
 
+console.log("cards: " + cards);
+
 //contenedorEl.append(...cards);
-cards.forEach((cards) => {
+cards.forEach((card) => {
   contenedorEl.appendChild(card);
 });
+
+const precioTotal = productosConDescuento.reduce((ac, producto) => {
+  return ac + calcularPrecioFinal(producto.precio, producto.descuento);
+}, 0);
+console.log(precioTotal);
