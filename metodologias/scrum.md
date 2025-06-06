@@ -1,4 +1,5 @@
 definition ready
+definition of done
 backlog
 
 draft, open , mp, code review,on qa, ready deploy, deploy, review, done
@@ -20,5 +21,19 @@ draft, open , mp, code review,on qa, ready deploy, deploy, review, done
 2. negociable
 3. valiosa
 4. estimable
-5. small
-6. testeable
+5. small (hay que dividirla si es necesario para que entre en un sprint)
+6. testeable (veficar el beneficio)
+
+## Estimacion de tiempo
+
+La mas natural es en horas
+
+## story points
+
+se usa la secuencia fibonacci
+
+### pocker planning (tecnica para evitar sesgos a traves de cartas de poker)
+
+Se le asigna numeros de estimacion a las user stories
+
+## t-shirt sizing (xs, s, m, l, xl, xxl)

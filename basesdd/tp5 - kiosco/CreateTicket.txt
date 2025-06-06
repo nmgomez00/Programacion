@@ -1,0 +1,81 @@
+
+
+CREATE PROCEDURE CreateTicket
+    @cabeceraTicket_id INT,
+    @outputTicket NVARCHAR(MAX) OUTPUT
+AS
+BEGIN
+    BEGIN TRY
+        DECLARE @comercio_razonSocial VARCHAR(256)
+        DECLARE @comercio_cuit INT
+        DECLARE @ticket_fecha DATETIME
+        DECLARE @total DECIMAL(10,2) = 0
+        DECLARE @ticket_output NVARCHAR(MAX) = ''
+        
+        -- Get commerce and ticket header info
+        SELECT 
+            @comercio_razonSocial = c.razonSocial,
+            @comercio_cuit = c.cuit,
+            @ticket_fecha = ct.fecha
+        FROM CabeceraTicket ct
+        INNER JOIN Comercio c ON ct.comercio_id = c.id
+        WHERE ct.id = @cabeceraTicket_id
+        
+        -- Build ticket header
+        SET @ticket_output = '----------------------------------------' + CHAR(13) + CHAR(10)
+        SET @ticket_output = @ticket_output + '        ' + @comercio_razonSocial + CHAR(13) + CHAR(10)
+        SET @ticket_output = @ticket_output + 'CUIT: ' + CAST(@comercio_cuit AS VARCHAR(20)) + CHAR(13) + CHAR(10)
+        SET @ticket_output = @ticket_output + 'Fecha: ' + CONVERT(VARCHAR, @ticket_fecha, 120) + CHAR(13) + CHAR(10)
+        SET @ticket_output = @ticket_output + '----------------------------------------' + CHAR(13) + CHAR(10)
+        SET @ticket_output = @ticket_output + 'Producto          Cantidad     Precio' + CHAR(13) + CHAR(10)
+        SET @ticket_output = @ticket_output + '----------------------------------------' + CHAR(13) + CHAR(10)
+        
+        -- Declare cursor for ticket items
+        DECLARE @producto_nombreTKT VARCHAR(256)
+        DECLARE @precioUnitario INT
+        DECLARE @cantidad INT
+        DECLARE @subtotal DECIMAL(10,2)
+        
+        DECLARE ticket_cursor CURSOR FOR
+        SELECT 
+            p.nombreTKT,
+            pp.precioUnitario + pp.ganancia AS precio,
+            1 AS cantidad -- Assuming one unit per item as ItemTicket doesn't store quantity
+        FROM ItemTicket it
+        INNER JOIN ProductoProveedor pp ON it.productoProveedor_id = pp.id
+        INNER JOIN Producto p ON pp.producto_id = p.id
+        WHERE it.cabeceraTicket_id = @cabeceraTicket_id
+        
+        OPEN ticket_cursor
+        FETCH NEXT FROM ticket_cursor INTO @producto_nombreTKT, @precioUnitario, @cantidad
+        
+        WHILE @@FETCH_STATUS = 0
+        BEGIN
+            SET @subtotal = @precioUnitario * @cantidad
+            SET @total = @total + @subtotal
+            
+            -- Format product line (left-align product name, right-align quantity and price)
+            SET @ticket_output = @ticket_output + 
+                LEFT(@producto_nombreTKT + '                ', 18) +
+                RIGHT('    ' + CAST(@cantidad AS VARCHAR(5)), 5) + '    ' +
+                RIGHT('$' + CAST(@subtotal AS VARCHAR(10)), 10) + CHAR(13) + CHAR(10)
+                
+            FETCH NEXT FROM ticket_cursor INTO @producto_nombreTKT, @precioUnitario, @cantidad
+        END
+        
+        CLOSE ticket_cursor
+        DEALLOCATE ticket_cursor
+        
+        -- Add total and footer
+        SET @ticket_output = @ticket_output + '----------------------------------------' + CHAR(13) + CHAR(10)
+        SET @ticket_output = @ticket_output + 'TOTAL:                    $' + CAST(@total AS VARCHAR(10)) + CHAR(13) + CHAR(10)
+        SET @ticket_output = @ticket_output + '----------------------------------------' + CHAR(13) + CHAR(10)
+        SET @ticket_output = @ticket_output + 'Gracias por su compra!' + CHAR(13) + CHAR(10)
+        
+        -- Set output parameter
+        SET @outputTicket = @ticket_output
+    END TRY
+    BEGIN CATCH
+        EXECUTE GetErrorInfo
+    END CATCH
+END;
