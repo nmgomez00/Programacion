@@ -24,3 +24,7 @@
 
 - Evento (onSomething)
 - Handler (La funcion que recibe el evento, el cual es un Callback)
+
+## inputs controlados
+
+Le pasamos el estado del input al state de react y este nos lo devuelve
