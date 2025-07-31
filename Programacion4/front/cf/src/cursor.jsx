@@ -10,14 +10,28 @@ export default function Cursor() {
  },[]);
 //tarea. Hacer que el icono siga al cursor. Usar la API windows.client, hacer con style no className
  const [pos,setPos] = useState({x:0,y:0});
- useEffect(()=>{},[]);
+ useEffect((
+ )=>{
+      const handleMouse = (e) => {
+            setPos(
+                  {
+                  x:e.ClientX,
+                  y:e.ClientY
+                  }
+            )
+      }
+      console.log(pos);
+      document.addEventListener("mousemove", handleMouse);
+      return ()=>{
+            document.removeEventListener("mousemove",handleMouse);
+      }
+ },[]);
   return (
         <div 
-        //style = {{}}
+        style = {{transform: `translate(${pos.x}px, ${pos.y}px)`}}
         className={ `${border} z-[-1] top-0 left-0 bg-gray-600 
         absolute w-20 h-20  border-2 rounded-full transition duration-200
         `}>
-
         </div>
   )
 }
