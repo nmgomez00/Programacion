@@ -5,7 +5,7 @@ const defaultGet = async (url) => {
   const { data, status } = await instanceDBS.get(url);
   switch (status) {
     case HttpStatusCode.Ok:
-      return data?.items;
+      return data;
     case HttpStatusCode.NotFound:
       console.log("not found");
       break;
