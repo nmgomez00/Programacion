@@ -9,3 +9,9 @@ export {
   getOneCharacterById,
   getOneCharacterByName,
 } from "./characters.js";
+
+export {
+  getAllPlanets,
+  getOnePlanetById,
+  getOnePlanetByName,
+} from "./planets.js";

@@ -33,6 +33,9 @@ export default function navBar() {
             <li>
               <Link href="/characters">Personajes</Link>
             </li>
+            <li>
+              <Link href="/planets">Planetas</Link>
+            </li>
           </ul>
         </div>
         <Link className="btn btn-ghost text-xl">API</Link>
@@ -44,6 +47,9 @@ export default function navBar() {
           </li>
           <li>
             <Link href="/characters">Personajes</Link>
+          </li>
+          <li>
+            <Link href="/planets">Planetas</Link>
           </li>
         </ul>
       </div>

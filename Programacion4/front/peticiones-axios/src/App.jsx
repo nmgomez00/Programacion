@@ -4,22 +4,32 @@ import { Switch, Route } from "wouter";
 import CharacterDetails from "./pages/characters/character-details";
 import NavBar from "./components/nav-bar";
 import ListOfCharacters from "./pages/characters/list-of-characters";
+import ListOfPlanets from "./pages/planets/list-of-planets";
+import PlanetDetails from "./pages/planets/planet-details";
 function App() {
   return (
     <>
       <NavBar />
       <Switch>
-        <Route path="/" component={Home}>
+        <Route path="/">
           <Home />
         </Route>
-        <Route path="/characters" component={Home}>
+        <Route path="/characters">
           <ListOfCharacters />
         </Route>
-        <Route path="/characters:id" component={Home}>
+        <Route path="/characters/:id">
           <CharacterDetails />
         </Route>
+        <Route path="/planets">
+          <ListOfPlanets />
+        </Route>
+        <Route path="/planets/:id">
+          <PlanetDetails />
+        </Route>
 
-        <Route component={Page404} />
+        <Route path="/:rest*">
+          <Page404 />
+        </Route>
       </Switch>
     </>
   );
