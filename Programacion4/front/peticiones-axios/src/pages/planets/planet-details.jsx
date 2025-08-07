@@ -11,17 +11,18 @@ export default function PlanetDetails() {
   }, []);
   return (
     <main>
-      <section className="hero bg-base-200 min-h-screen">
-        <div className="hero-content flex-col lg:flex-row">
+      <section className="hero bg-base-200 mx-auto w-3/4 ">
+        <div className="hero-content flex-col lg:flex-col items-start">
+          <div className=" lg:flex-col  flex-col flex-nowrap">
           <img src={planet.image} className="max-w-sm rounded-lg shadow-2xl" />
-          <div>
-            <h1 className="text-5xl font-bold">Box Office News!</h1>
-            <p className="py-6">
+          <h1 className="text-5xl font-bold">{planet.name}</h1>
+            <p className="py-6 max-h-60 overflow-y-scroll">
               {planet.description
                 ? planet.description
                 : "No description available"}
             </p>
-            {planet.characters && planet.characters.length > 0 ? (
+          </div>
+          {planet.characters && planet.characters.length > 0 ? (
               <div>
                 <h2 className="text-3xl font-bold">Characters:</h2>
                 <div className="flex flex-wrap gap-4">
@@ -33,7 +34,6 @@ export default function PlanetDetails() {
             ) : (
               <p>No characters found for this planet.</p>
             )}
-          </div>
         </div>
       </section>
     </main>
