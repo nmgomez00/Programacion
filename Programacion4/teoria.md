@@ -11,3 +11,8 @@
 - Cuando alguna de las variables en el array de dependencias cambia entre renderizados, entonces y solo entonces, el efecto se vuelve a ejecutar. Si el array está vacío ([]), el efecto se ejecuta solo una vez después del renderizado inicial, ya que no "depende" de ninguna variable que pueda cambiar.
 
 - Cuando un componente de rerenderiza "renace", muere y vuelve a vivir
+
+
+- prop drilling 
+- handler
+- eventos=> callbacks
