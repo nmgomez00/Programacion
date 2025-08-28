@@ -1,6 +1,6 @@
-import { useStore } from "zustand";
+import { useStore } from "../store/useContadorStore";
 
-function Controls() {
+export default function Controls() {
   const increasePopulation = useStore((state) => state.increasePopulation);
   return <button onClick={increasePopulation}>one up</button>;
 }

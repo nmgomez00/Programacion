@@ -1,8 +1,17 @@
 import { create } from "zustand";
+//import { persist } from "zustand/middleware";
 
-const useStore = create((set) => ({
-  bears: 0,
-  increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
-  removeAllBears: () => set({ bears: 0 }),
-  updateBears: (newBears) => set({ bears: newBears }),
+export const useStore = create((set) => ({
+  usuarios: [],
+  cargarUsuarios: async () => {
+    try {
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/users"
+      );
+      const data = await response.json();
+      set({ usuarios: data });
+    } catch (error) {
+      console.error("Error al cargar usuarios:", error);
+    }
+  },
 }));

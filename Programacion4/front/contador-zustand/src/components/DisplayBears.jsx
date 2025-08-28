@@ -1,6 +1,6 @@
-import { useStore } from "zustand";
+import { useStore } from "../store/useContadorStore";
 
-function BearCounter() {
+export default function BearCounter() {
   const bears = useStore((state) => state.bears);
   return <h1>{bears} bears around here...</h1>;
 }
