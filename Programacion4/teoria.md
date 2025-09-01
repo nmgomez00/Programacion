@@ -16,3 +16,15 @@
 - prop drilling 
 - handler
 - eventos=> callbacks
+
+## regex
+Las expresiones regulares son muy utiles a la hora de buscar patrones en los textos. Una utilidad muy importante es hacer patrones de validaciones para los inputs que usamos en nuestros formularios.
+
+### Caracteristica claves
+Los patrones suelen envolverse dentro de dos barras //, al finalizar la ultima barra se pueden asignar banderas (flags).
+flags importantes:
+- i: sirve para buscar patrones case insensitive, lo que significa que no distingue entre mayúsculas y minúsculas (ej. /a/i encontrará 'a' y 'A').
+
+- g: sirve para buscar más de una vez el patrón dentro de una cadena de texto. Si no se usa, solo se encontrará la primera coincidencia (ej. /o/g en "hello world" encontrará ambas 'o').
+
+- m: multiline, permite que los caracteres de anclaje ^ y $ coincidan con el inicio y el final de cada línea, en lugar de solo con el inicio y el final de toda la cadena de texto. Esto es útil para buscar coincidencias en documentos con múltiples líneas.
