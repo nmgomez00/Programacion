@@ -1,6 +1,14 @@
 import Control from "./control";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { userValidation } from "../validation/user-validation";
 
-export default function Form({ handleSubmit, register, errors }) {
+export default function Form() {
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm({ resolver: zodResolver(userValidation) });
   const onSubmit = (data) => console.log(data);
   return (
     <>
@@ -15,7 +23,7 @@ export default function Form({ handleSubmit, register, errors }) {
         <Control
           type={"text"}
           register={register}
-          errors={errors?.username}
+          error={errors?.username}
           name={"username"}
           label={"Username:"}
         />
@@ -30,7 +38,7 @@ export default function Form({ handleSubmit, register, errors }) {
         <Control
           type={"email"}
           register={register}
-          errors={errors?.email}
+          error={errors?.email}
           name={"email"}
           label={"Email"}
         />
@@ -44,7 +52,7 @@ export default function Form({ handleSubmit, register, errors }) {
         <Control
           type={"password"}
           register={register}
-          errors={errors?.password}
+          error={errors?.password}
           name={"password"}
           label={"Contraseña"}
         />
@@ -62,7 +70,7 @@ export default function Form({ handleSubmit, register, errors }) {
         <Control
           type={"password"}
           register={register}
-          errors={errors?.confirmPassword}
+          error={errors?.confirmPassword}
           name={"confirmPassword"}
           label={"Confirmar contraseña"}
         />
