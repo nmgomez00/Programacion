@@ -2,7 +2,7 @@
   {
     "ContainingType": "introduccion.Controllers.CineController",
     "Method": "get",
-    "RelativePath": "api/cines/check",
+    "RelativePath": "api/cines",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

@@ -1,4 +1,5 @@
-﻿using introduccion.Servicios;
+﻿using introduccion.Services;
+using introduccion.Servicios;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,14 +9,14 @@ namespace introduccion.Controllers
     [ApiController]
     public class CineController : ControllerBase
     {
-        private readonly CineServices _cineServices;
-        public CineController()
+        private readonly Iservices<Models.Cine> _cineServices;
+        public CineController(Iservices<Models.Cine> cineServices)
         {
-            _cineServices = new CineServices();
+            _cineServices = cineServices;
         }
 
 
-        [HttpGet("check")]
+        [HttpGet]
         public ActionResult<List<Models.Cine>> get()
         {
             var cines = _cineServices.GetAll();

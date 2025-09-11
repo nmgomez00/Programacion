@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ngomez\\source\\repos\\introduccion\\introduccion\\introduccion.csproj": {}
+    "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\introduccion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ngomez\\source\\repos\\introduccion\\introduccion\\introduccion.csproj": {
+    "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\introduccion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ngomez\\source\\repos\\introduccion\\introduccion\\introduccion.csproj",
+        "projectUniqueName": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\introduccion.csproj",
         "projectName": "introduccion",
-        "projectPath": "C:\\Users\\ngomez\\source\\repos\\introduccion\\introduccion\\introduccion.csproj",
+        "projectPath": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\introduccion.csproj",
         "packagesPath": "C:\\Users\\ngomez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ngomez\\source\\repos\\introduccion\\introduccion\\obj\\",
+        "outputPath": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,30 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ngomez\\source\\repos\\introduccion\\",
+  "WorkspaceRootPath": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|c:\\users\\ngomez\\source\\repos\\introduccion\\introduccion\\controllers\\cinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|c:\\users\\ngomez\\downloads\\programacion\\programacion4\\backend\\introduccion\\introduccion\\controllers\\genericcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|solutionrelative:introduccion\\controllers\\genericcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|c:\\users\\ngomez\\downloads\\programacion\\programacion4\\backend\\introduccion\\introduccion\\controllers\\cinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|solutionrelative:introduccion\\controllers\\cinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|c:\\users\\ngomez\\source\\repos\\introduccion\\introduccion\\services\\cineservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|solutionrelative:introduccion\\services\\cineservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|c:\\users\\ngomez\\downloads\\programacion\\programacion4\\backend\\introduccion\\introduccion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|solutionrelative:introduccion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|c:\\users\\ngomez\\source\\repos\\introduccion\\introduccion\\models\\cine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|c:\\users\\ngomez\\downloads\\programacion\\programacion4\\backend\\introduccion\\introduccion\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|solutionrelative:introduccion\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|c:\\users\\ngomez\\downloads\\programacion\\programacion4\\backend\\introduccion\\introduccion\\models\\cine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|solutionrelative:introduccion\\models\\cine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|c:\\users\\ngomez\\source\\repos\\introduccion\\introduccion\\models\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|c:\\users\\ngomez\\downloads\\programacion\\programacion4\\backend\\introduccion\\introduccion\\models\\helado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|solutionrelative:introduccion\\models\\helado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|c:\\users\\ngomez\\downloads\\programacion\\programacion4\\backend\\introduccion\\introduccion\\models\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|solutionrelative:introduccion\\models\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|c:\\users\\ngomez\\source\\repos\\introduccion\\introduccion\\introduccion.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|solutionrelative:introduccion\\introduccion.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|c:\\users\\ngomez\\downloads\\programacion\\programacion4\\backend\\introduccion\\introduccion\\services\\cineservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|solutionrelative:introduccion\\services\\cineservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|c:\\users\\ngomez\\source\\repos\\introduccion\\introduccion\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|solutionrelative:introduccion\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|c:\\users\\ngomez\\downloads\\programacion\\programacion4\\backend\\introduccion\\introduccion\\services\\heladoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|solutionrelative:introduccion\\services\\heladoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|c:\\users\\ngomez\\downloads\\programacion\\programacion4\\backend\\introduccion\\introduccion\\services\\iservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|solutionrelative:introduccion\\services\\iservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|c:\\users\\ngomez\\downloads\\programacion\\programacion4\\backend\\introduccion\\introduccion\\introduccion.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A54B5032-6CA4-4516-8C3E-34562A7E8F7A}|introduccion\\introduccion.csproj|solutionrelative:introduccion\\introduccion.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,8 +54,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GenericController.cs",
+              "DocumentMoniker": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Controllers\\GenericController.cs",
+              "RelativeDocumentMoniker": "introduccion\\Controllers\\GenericController.cs",
+              "ToolTip": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Controllers\\GenericController.cs",
+              "RelativeToolTip": "introduccion\\Controllers\\GenericController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T20:41:20.591Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
@@ -46,37 +79,89 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
+              "Title": "Iservices.cs",
+              "DocumentMoniker": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Services\\Iservices.cs",
+              "RelativeDocumentMoniker": "introduccion\\Services\\Iservices.cs",
+              "ToolTip": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Services\\Iservices.cs",
+              "RelativeToolTip": "introduccion\\Services\\Iservices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T20:13:45.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HeladoServices.cs",
+              "DocumentMoniker": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Services\\HeladoServices.cs",
+              "RelativeDocumentMoniker": "introduccion\\Services\\HeladoServices.cs",
+              "ToolTip": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Services\\HeladoServices.cs",
+              "RelativeToolTip": "introduccion\\Services\\HeladoServices.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T20:01:40.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Helado.cs",
+              "DocumentMoniker": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Models\\Helado.cs",
+              "RelativeDocumentMoniker": "introduccion\\Models\\Helado.cs",
+              "ToolTip": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Models\\Helado.cs",
+              "RelativeToolTip": "introduccion\\Models\\Helado.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T19:58:22.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Program.cs",
+              "RelativeDocumentMoniker": "introduccion\\Program.cs",
+              "ToolTip": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Program.cs",
+              "RelativeToolTip": "introduccion\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T19:29:24.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "CineController.cs",
-              "DocumentMoniker": "C:\\Users\\ngomez\\source\\repos\\introduccion\\introduccion\\Controllers\\CineController.cs",
+              "DocumentMoniker": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Controllers\\CineController.cs",
               "RelativeDocumentMoniker": "introduccion\\Controllers\\CineController.cs",
-              "ToolTip": "C:\\Users\\ngomez\\source\\repos\\introduccion\\introduccion\\Controllers\\CineController.cs",
+              "ToolTip": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Controllers\\CineController.cs",
               "RelativeToolTip": "introduccion\\Controllers\\CineController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-09T18:44:00.794Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "CineServices.cs",
-              "DocumentMoniker": "C:\\Users\\ngomez\\source\\repos\\introduccion\\introduccion\\Services\\CineServices.cs",
+              "DocumentMoniker": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Services\\CineServices.cs",
               "RelativeDocumentMoniker": "introduccion\\Services\\CineServices.cs",
-              "ToolTip": "C:\\Users\\ngomez\\source\\repos\\introduccion\\introduccion\\Services\\CineServices.cs",
+              "ToolTip": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Services\\CineServices.cs",
               "RelativeToolTip": "introduccion\\Services\\CineServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-09T18:32:08.375Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Cine.cs",
-              "DocumentMoniker": "C:\\Users\\ngomez\\source\\repos\\introduccion\\introduccion\\Models\\Cine.cs",
+              "DocumentMoniker": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Models\\Cine.cs",
               "RelativeDocumentMoniker": "introduccion\\Models\\Cine.cs",
-              "ToolTip": "C:\\Users\\ngomez\\source\\repos\\introduccion\\introduccion\\Models\\Cine.cs",
+              "ToolTip": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Models\\Cine.cs",
               "RelativeToolTip": "introduccion\\Models\\Cine.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -85,11 +170,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\ngomez\\source\\repos\\introduccion\\introduccion\\Models\\WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Models\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "introduccion\\Models\\WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\ngomez\\source\\repos\\introduccion\\introduccion\\Models\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Models\\WeatherForecast.cs",
               "RelativeToolTip": "introduccion\\Models\\WeatherForecast.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -98,26 +183,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "introduccion",
-              "DocumentMoniker": "C:\\Users\\ngomez\\source\\repos\\introduccion\\introduccion\\introduccion.csproj",
+              "DocumentIndex": 10,
+              "Title": "introduccion.csproj",
+              "DocumentMoniker": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\introduccion.csproj",
               "RelativeDocumentMoniker": "introduccion\\introduccion.csproj",
-              "ToolTip": "C:\\Users\\ngomez\\source\\repos\\introduccion\\introduccion\\introduccion.csproj",
+              "ToolTip": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\introduccion.csproj",
               "RelativeToolTip": "introduccion\\introduccion.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-09T18:23:33.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T18:23:33.662Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\ngomez\\source\\repos\\introduccion\\introduccion\\Controllers\\WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "introduccion\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\ngomez\\source\\repos\\introduccion\\introduccion\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Controllers\\WeatherForecastController.cs",
               "RelativeToolTip": "introduccion\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAAAwAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAwAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-09T18:18:12.625Z",
               "EditorCaption": ""

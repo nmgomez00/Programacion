@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/cines/check": {
+    "/api/cines": {
       "get": {
         "tags": [
           "Cine"

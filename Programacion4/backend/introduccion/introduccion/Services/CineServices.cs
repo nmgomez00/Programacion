@@ -1,6 +1,8 @@
-﻿namespace introduccion.Servicios
+﻿using introduccion.Services;
+namespace introduccion.Servicios
 {
-    public class CineServices
+    
+    public class CineServices : Iservices<Models.Cine>
     {
         private readonly List<Models.Cine> cines = new() { 
             new() {Id = 1, Nombre="Cinemark", IsOpen = true},
