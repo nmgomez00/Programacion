@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ajgonzalez\\source\\repos\\Introduccion\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{14FC9DDA-D947-4278-A3EB-85F757A2AA82}|Introduccion\\Introduccion.csproj|c:\\users\\ajgonzalez\\source\\repos\\introduccion\\introduccion\\services\\iservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14FC9DDA-D947-4278-A3EB-85F757A2AA82}|Introduccion\\Introduccion.csproj|solutionrelative:introduccion\\services\\iservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14FC9DDA-D947-4278-A3EB-85F757A2AA82}|Introduccion\\Introduccion.csproj|c:\\users\\ajgonzalez\\source\\repos\\introduccion\\introduccion\\controllers\\cinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14FC9DDA-D947-4278-A3EB-85F757A2AA82}|Introduccion\\Introduccion.csproj|solutionrelative:introduccion\\controllers\\cinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14FC9DDA-D947-4278-A3EB-85F757A2AA82}|Introduccion\\Introduccion.csproj|c:\\users\\ajgonzalez\\source\\repos\\introduccion\\introduccion\\services\\cineservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14FC9DDA-D947-4278-A3EB-85F757A2AA82}|Introduccion\\Introduccion.csproj|solutionrelative:introduccion\\services\\cineservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14FC9DDA-D947-4278-A3EB-85F757A2AA82}|Introduccion\\Introduccion.csproj|c:\\users\\ajgonzalez\\source\\repos\\introduccion\\introduccion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14FC9DDA-D947-4278-A3EB-85F757A2AA82}|Introduccion\\Introduccion.csproj|solutionrelative:introduccion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14FC9DDA-D947-4278-A3EB-85F757A2AA82}|Introduccion\\Introduccion.csproj|c:\\users\\ajgonzalez\\source\\repos\\introduccion\\introduccion\\services\\heladoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14FC9DDA-D947-4278-A3EB-85F757A2AA82}|Introduccion\\Introduccion.csproj|solutionrelative:introduccion\\services\\heladoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14FC9DDA-D947-4278-A3EB-85F757A2AA82}|Introduccion\\Introduccion.csproj|c:\\users\\ajgonzalez\\source\\repos\\introduccion\\introduccion\\models\\helado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14FC9DDA-D947-4278-A3EB-85F757A2AA82}|Introduccion\\Introduccion.csproj|solutionrelative:introduccion\\models\\helado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14FC9DDA-D947-4278-A3EB-85F757A2AA82}|Introduccion\\Introduccion.csproj|c:\\users\\ajgonzalez\\source\\repos\\introduccion\\introduccion\\models\\cine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14FC9DDA-D947-4278-A3EB-85F757A2AA82}|Introduccion\\Introduccion.csproj|solutionrelative:introduccion\\models\\cine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IServices.cs",
+              "DocumentMoniker": "C:\\Users\\ajgonzalez\\source\\repos\\Introduccion\\Introduccion\\Services\\IServices.cs",
+              "RelativeDocumentMoniker": "Introduccion\\Services\\IServices.cs",
+              "ToolTip": "C:\\Users\\ajgonzalez\\source\\repos\\Introduccion\\Introduccion\\Services\\IServices.cs",
+              "RelativeToolTip": "Introduccion\\Services\\IServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T20:13:41.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HeladoServices.cs",
+              "DocumentMoniker": "C:\\Users\\ajgonzalez\\source\\repos\\Introduccion\\Introduccion\\Services\\HeladoServices.cs",
+              "RelativeDocumentMoniker": "Introduccion\\Services\\HeladoServices.cs",
+              "ToolTip": "C:\\Users\\ajgonzalez\\source\\repos\\Introduccion\\Introduccion\\Services\\HeladoServices.cs",
+              "RelativeToolTip": "Introduccion\\Services\\HeladoServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T20:01:29.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Cine.cs",
+              "DocumentMoniker": "C:\\Users\\ajgonzalez\\source\\repos\\Introduccion\\Introduccion\\Models\\Cine.cs",
+              "RelativeDocumentMoniker": "Introduccion\\Models\\Cine.cs",
+              "ToolTip": "C:\\Users\\ajgonzalez\\source\\repos\\Introduccion\\Introduccion\\Models\\Cine.cs",
+              "RelativeToolTip": "Introduccion\\Models\\Cine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T20:01:15.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Helado.cs",
+              "DocumentMoniker": "C:\\Users\\ajgonzalez\\source\\repos\\Introduccion\\Introduccion\\Models\\Helado.cs",
+              "RelativeDocumentMoniker": "Introduccion\\Models\\Helado.cs",
+              "ToolTip": "C:\\Users\\ajgonzalez\\source\\repos\\Introduccion\\Introduccion\\Models\\Helado.cs",
+              "RelativeToolTip": "Introduccion\\Models\\Helado.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T19:58:21.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ajgonzalez\\source\\repos\\Introduccion\\Introduccion\\Program.cs",
+              "RelativeDocumentMoniker": "Introduccion\\Program.cs",
+              "ToolTip": "C:\\Users\\ajgonzalez\\source\\repos\\Introduccion\\Introduccion\\Program.cs",
+              "RelativeToolTip": "Introduccion\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T19:29:05.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CineController.cs",
+              "DocumentMoniker": "C:\\Users\\ajgonzalez\\source\\repos\\Introduccion\\Introduccion\\Controllers\\CineController.cs",
+              "RelativeDocumentMoniker": "Introduccion\\Controllers\\CineController.cs",
+              "ToolTip": "C:\\Users\\ajgonzalez\\source\\repos\\Introduccion\\Introduccion\\Controllers\\CineController.cs",
+              "RelativeToolTip": "Introduccion\\Controllers\\CineController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T18:43:55.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CineServices.cs",
+              "DocumentMoniker": "C:\\Users\\ajgonzalez\\source\\repos\\Introduccion\\Introduccion\\Services\\CineServices.cs",
+              "RelativeDocumentMoniker": "Introduccion\\Services\\CineServices.cs",
+              "ToolTip": "C:\\Users\\ajgonzalez\\source\\repos\\Introduccion\\Introduccion\\Services\\CineServices.cs",
+              "RelativeToolTip": "Introduccion\\Services\\CineServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T18:32:03.295Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
