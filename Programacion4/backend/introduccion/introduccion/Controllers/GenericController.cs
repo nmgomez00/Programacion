@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 // Clase base genérica para controladores
 // Este es el "controlador genérico" que reutilizarás
-[Route("api/all")]
+[Route("api/all)]
 [ApiController]
 public abstract class GenericController<T> : ControllerBase where T : class
 {

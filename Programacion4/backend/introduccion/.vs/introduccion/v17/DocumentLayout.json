@@ -54,12 +54,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
@@ -72,7 +68,7 @@
               "RelativeDocumentMoniker": "introduccion\\Controllers\\GenericController.cs",
               "ToolTip": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\introduccion\\introduccion\\Controllers\\GenericController.cs",
               "RelativeToolTip": "introduccion\\Controllers\\GenericController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-11T20:41:20.591Z",
               "EditorCaption": ""
@@ -87,8 +83,7 @@
               "RelativeToolTip": "introduccion\\Services\\Iservices.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T20:13:45.679Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T20:13:45.679Z"
             },
             {
               "$type": "Document",
@@ -100,8 +95,7 @@
               "RelativeToolTip": "introduccion\\Services\\HeladoServices.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAxwBIAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T20:01:40.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T20:01:40.691Z"
             },
             {
               "$type": "Document",
@@ -113,8 +107,7 @@
               "RelativeToolTip": "introduccion\\Models\\Helado.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T19:58:22.706Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T19:58:22.706Z"
             },
             {
               "$type": "Document",
@@ -126,8 +119,7 @@
               "RelativeToolTip": "introduccion\\Program.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T19:29:24.706Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T19:29:24.706Z"
             },
             {
               "$type": "Document",
@@ -152,8 +144,7 @@
               "RelativeToolTip": "introduccion\\Services\\CineServices.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T18:32:08.375Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T18:32:08.375Z"
             },
             {
               "$type": "Document",
@@ -165,8 +156,7 @@
               "RelativeToolTip": "introduccion\\Models\\Cine.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T18:28:06.537Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T18:28:06.537Z"
             },
             {
               "$type": "Document",
@@ -178,8 +168,7 @@
               "RelativeToolTip": "introduccion\\Models\\WeatherForecast.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T18:26:51.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T18:26:51.764Z"
             },
             {
               "$type": "Document",
@@ -203,8 +192,7 @@
               "RelativeToolTip": "introduccion\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwAwAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T18:18:12.625Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T18:18:12.625Z"
             }
           ]
         }
