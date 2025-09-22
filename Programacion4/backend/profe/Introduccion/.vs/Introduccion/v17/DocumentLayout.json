@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ajgonzalez\\source\\repos\\Introduccion\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{14FC9DDA-D947-4278-A3EB-85F757A2AA82}|Introduccion\\Introduccion.csproj|c:\\users\\ajgonzalez\\source\\repos\\introduccion\\introduccion\\controllers\\cinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14FC9DDA-D947-4278-A3EB-85F757A2AA82}|Introduccion\\Introduccion.csproj|solutionrelative:introduccion\\controllers\\cinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14FC9DDA-D947-4278-A3EB-85F757A2AA82}|Introduccion\\Introduccion.csproj|c:\\users\\ajgonzalez\\source\\repos\\introduccion\\introduccion\\services\\cineservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14FC9DDA-D947-4278-A3EB-85F757A2AA82}|Introduccion\\Introduccion.csproj|solutionrelative:introduccion\\services\\cineservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CineServices.cs",
+              "DocumentMoniker": "C:\\Users\\ajgonzalez\\source\\repos\\Introduccion\\Introduccion\\Services\\CineServices.cs",
+              "RelativeDocumentMoniker": "Introduccion\\Services\\CineServices.cs",
+              "ToolTip": "C:\\Users\\ajgonzalez\\source\\repos\\Introduccion\\Introduccion\\Services\\CineServices.cs",
+              "RelativeToolTip": "Introduccion\\Services\\CineServices.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAE8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T20:18:28.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CineController.cs",
+              "DocumentMoniker": "C:\\Users\\ajgonzalez\\source\\repos\\Introduccion\\Introduccion\\Controllers\\CineController.cs",
+              "RelativeDocumentMoniker": "Introduccion\\Controllers\\CineController.cs",
+              "ToolTip": "C:\\Users\\ajgonzalez\\source\\repos\\Introduccion\\Introduccion\\Controllers\\CineController.cs",
+              "RelativeToolTip": "Introduccion\\Controllers\\CineController.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAcwGwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:40:10.23Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
