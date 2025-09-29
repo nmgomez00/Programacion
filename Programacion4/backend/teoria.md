@@ -42,3 +42,6 @@ El medio de comunicacion entre  la app que funciona por objetos y la base de dat
 Este se dataset se ve como una tabla de exel
 
 Para ello se usa el ORM (Object relational mapping)
+
+## Cors
+- Se debe configurar en el backend

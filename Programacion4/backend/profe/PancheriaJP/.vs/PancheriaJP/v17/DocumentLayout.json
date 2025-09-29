@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\profe\\PancheriaJP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\profe\\PancheriaJP\\PancheriaJP\\Migrations\\20250925203138_DbCreated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PancheriaJP\\Migrations\\20250925203138_DbCreated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1B34205E-841D-4A3F-95D9-ED967A1E7440}|PancheriaJP\\PancheriaJP.csproj|c:\\users\\ngomez\\downloads\\programacion\\programacion4\\backend\\profe\\pancheriajp\\pancheriajp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B34205E-841D-4A3F-95D9-ED967A1E7440}|PancheriaJP\\PancheriaJP.csproj|solutionrelative:pancheriajp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B34205E-841D-4A3F-95D9-ED967A1E7440}|PancheriaJP\\PancheriaJP.csproj|c:\\users\\ngomez\\downloads\\programacion\\programacion4\\backend\\profe\\pancheriajp\\pancheriajp\\migrations\\20250925203138_dbcreated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B34205E-841D-4A3F-95D9-ED967A1E7440}|PancheriaJP\\PancheriaJP.csproj|solutionrelative:pancheriajp\\migrations\\20250925203138_dbcreated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1B34205E-841D-4A3F-95D9-ED967A1E7440}|PancheriaJP\\PancheriaJP.csproj|c:\\users\\ngomez\\downloads\\programacion\\programacion4\\backend\\profe\\pancheriajp\\pancheriajp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{1B34205E-841D-4A3F-95D9-ED967A1E7440}|PancheriaJP\\PancheriaJP.csproj|solutionrelative:pancheriajp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B34205E-841D-4A3F-95D9-ED967A1E7440}|PancheriaJP\\PancheriaJP.csproj|c:\\users\\ngomez\\downloads\\programacion\\programacion4\\backend\\profe\\pancheriajp\\pancheriajp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B34205E-841D-4A3F-95D9-ED967A1E7440}|PancheriaJP\\PancheriaJP.csproj|solutionrelative:pancheriajp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1B34205E-841D-4A3F-95D9-ED967A1E7440}|PancheriaJP\\PancheriaJP.csproj|c:\\users\\ngomez\\downloads\\programacion\\programacion4\\backend\\profe\\pancheriajp\\pancheriajp\\services\\panchoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,7 +58,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "20250925203138_DbCreated.cs",
               "DocumentMoniker": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\profe\\PancheriaJP\\PancheriaJP\\Migrations\\20250925203138_DbCreated.cs",
               "RelativeDocumentMoniker": "PancheriaJP\\Migrations\\20250925203138_DbCreated.cs",
@@ -71,13 +71,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\profe\\PancheriaJP\\PancheriaJP\\Program.cs",
               "RelativeDocumentMoniker": "PancheriaJP\\Program.cs",
               "ToolTip": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\profe\\PancheriaJP\\PancheriaJP\\Program.cs",
               "RelativeToolTip": "PancheriaJP\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-25T20:09:28.172Z",
               "EditorCaption": ""
@@ -92,8 +92,7 @@
               "RelativeToolTip": "PancheriaJP\\Config\\Mapping.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T20:03:23.029Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T20:03:23.029Z"
             },
             {
               "$type": "Document",
@@ -105,8 +104,7 @@
               "RelativeToolTip": "PancheriaJP\\Controllers\\PanchoController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T20:03:19.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T20:03:19.12Z"
             },
             {
               "$type": "Document",
@@ -118,8 +116,7 @@
               "RelativeToolTip": "PancheriaJP\\Models\\Pancho\\Dto\\CreatePanchoDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T20:03:10.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T20:03:10.372Z"
             },
             {
               "$type": "Document",
@@ -131,8 +128,7 @@
               "RelativeToolTip": "PancheriaJP\\Models\\Pancho\\Pancho.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T20:00:21.074Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T20:00:21.074Z"
             },
             {
               "$type": "Document",
@@ -144,8 +140,7 @@
               "RelativeToolTip": "PancheriaJP\\Config\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAowAoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T19:53:38.919Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T19:53:38.919Z"
             },
             {
               "$type": "Document",
@@ -157,12 +152,11 @@
               "RelativeToolTip": "PancheriaJP\\Services\\PanchoServices.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAcwDwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T19:47:34.52Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T19:47:34.52Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\ngomez\\Downloads\\Programacion\\Programacion4\\backend\\profe\\PancheriaJP\\PancheriaJP\\appsettings.Development.json",
               "RelativeDocumentMoniker": "PancheriaJP\\appsettings.Development.json",
@@ -170,8 +164,7 @@
               "RelativeToolTip": "PancheriaJP\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-25T19:43:54.199Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T19:43:54.199Z"
             }
           ]
         }
