@@ -35,3 +35,13 @@ Es una biblioteca para documentar codigo y muchas mas utilidades
 ## error de permisos
 - Haces click en el mensaje de error
 - Escribis "thisisunsafe"
+
+### Entity framework - explicacion de dataset
+El medio de comunicacion entre  la app que funciona por objetos y la base de datos (schema)
+
+Este se dataset se ve como una tabla de exel
+
+Para ello se usa el ORM (Object relational mapping)
+
+## Cors
+- Se debe configurar en el backend
