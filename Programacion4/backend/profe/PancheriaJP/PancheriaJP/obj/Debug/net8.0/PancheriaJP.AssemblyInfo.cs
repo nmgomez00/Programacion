@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PancheriaJP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c3967cb916e5bb52e10845236d7bfb2bd7960b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a011d503b049af3b0701b083ee1e6f332e23fa90")]
 [assembly: System.Reflection.AssemblyProductAttribute("PancheriaJP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PancheriaJP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

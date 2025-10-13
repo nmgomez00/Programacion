@@ -21,6 +21,40 @@ namespace PancheriaJP.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("PancheriaJP.Models.Categoria.Categoria", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categorias");
+                });
+
+            modelBuilder.Entity("PancheriaJP.Models.Ingrediente.Ingrediente", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Ingredientes");
+                });
+
             modelBuilder.Entity("PancheriaJP.Models.Pancho.Pancho", b =>
                 {
                     b.Property<int>("Id")
@@ -32,6 +66,9 @@ namespace PancheriaJP.Migrations
                     b.PrimitiveCollection<string>("Aderezos")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CategoriaId")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsVegano")
                         .HasColumnType("bit");
@@ -45,25 +82,20 @@ namespace PancheriaJP.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Panchos");
+                    b.HasIndex("CategoriaId");
 
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Aderezos = "[\"Mayonesa\",\"Mostaza\"]",
-                            IsVegano = false,
-                            Nombre = "Normal",
-                            Precio = 12.5
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Aderezos = "[\"Mayonesa\",\"Mostaza\",\"Papitas\"]",
-                            IsVegano = false,
-                            Nombre = "Super Pancho",
-                            Precio = 20.0
-                        });
+                    b.ToTable("Panchos");
+                });
+
+            modelBuilder.Entity("PancheriaJP.Models.Pancho.Pancho", b =>
+                {
+                    b.HasOne("PancheriaJP.Models.Categoria.Categoria", "Categoria")
+                        .WithMany()
+                        .HasForeignKey("CategoriaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Categoria");
                 });
 #pragma warning restore 612, 618
         }

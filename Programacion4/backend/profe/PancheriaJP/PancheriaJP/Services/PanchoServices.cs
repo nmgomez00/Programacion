@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using Introduccion.Utils;
+using Microsoft.EntityFrameworkCore;
 using PancheriaJP.Config;
 using PancheriaJP.Models.Pancho;
 using PancheriaJP.Models.Pancho.Dto;
+using PancheriaJP.Repositories;
 using System.Net;
 
 namespace PancheriaJP.Services
@@ -10,78 +12,69 @@ namespace PancheriaJP.Services
     public class PanchoServices
     {
         private readonly IMapper _mapper;
-        private readonly ApplicationDbContext _db;
-        public PanchoServices(IMapper mapper, ApplicationDbContext db)
+        private readonly IPanchoRepository _repo;
+        public PanchoServices(IMapper mapper, IPanchoRepository repo)
         {
             _mapper = mapper;
-            _db = db;
+            _repo = repo;
         }
 
-        //private List<Pancho> panchitos = new()
-        //{
-        //    new() { Id = 1, Nombre = "Normal", IsVegano = false, Precio = 12.50, Aderezos = new() { "Mayonesa", "Mostaza" } },
-        //    new() { Id = 2, Nombre = "Super Pancho", IsVegano = false, Precio = 20, Aderezos = new() { "Mayonesa", "Mostaza", "Papitas" } },
-        //};
-
-        private Pancho GetOneByIdOrException(int id)
+        async private Task<PanchoDTO> GetOneByIdOrException(int id)
         {
-            var panchito = _db.Panchos.FirstOrDefault(p => p.Id == id);
+            var panchito = await _repo.GetOne(p => p.Id == id);
             if (panchito == null)
             {
                 throw new HttpResponseError(HttpStatusCode.NotFound, $"No hay panchito con id = {id}");
             }
-            return panchito;
+            return _mapper.Map<PanchoDTO>(panchito);
         }
 
-        public List<PanchosDTO> GetAll()
+        async public Task<List<PanchosDTO>> GetAll()
         {
-            return _mapper.Map<List<PanchosDTO>>(_db.Panchos.ToList());
+            var panchos = await _repo.GetAll();
+            return _mapper.Map<List<PanchosDTO>>(panchos);
         }
 
-        public Pancho GetOneById(int id) => GetOneByIdOrException(id);
+        async public Task<PanchoDTO> GetOneById(int id) => await GetOneByIdOrException(id);
 
-        public List<PanchoAderezoDTO> GetAllByAderezo(string aderezo)
+        async public Task<List<PanchoAderezoDTO>> GetAllByAderezo(string aderezo)
         {
-            List<Pancho> panchos = _db.Panchos.ToList().FindAll(p => 
-                p.Aderezos
-                .Select(x => x.ToLower())
-                .ToList()
-                .Contains(aderezo.ToLower())
+            var panchos = await _repo.GetAll(p =>
+                p.Aderezos.Contains(aderezo.ToLower())
             );
 
             return _mapper.Map<List<PanchoAderezoDTO>>(panchos);
         }
 
-        public Pancho CreateOne(CreatePanchoDTO createDTO)
+        async public Task<Pancho> CreateOne(CreatePanchoDTO createDTO)
         {
-            int lastId = _db.Panchos.Last().Id;
-
+            if (createDTO.Aderezos != null && createDTO.Aderezos.Count > 0) {
+                createDTO.Aderezos = createDTO.Aderezos.Select(x => x.ToLower()).ToList();
+            }
             var pancho = _mapper.Map<Pancho>(createDTO);
 
-
-            _db.Panchos.Add(pancho);
-            _db.SaveChanges();
+            await _repo.CreateOne(pancho);
 
             return pancho;
         }
 
-        public Pancho UpdateOneById(int id, UpdatePanchoDTO updateDTO)
+        async public Task<PanchoDTO> UpdateOneById(int id, UpdatePanchoDTO updateDTO)
         {
-            var pancho = GetOneByIdOrException(id);
+            var p = await GetOneByIdOrException(id);
+            var panchito = _mapper.Map<Pancho>(p);
 
-            var panchoMapped = _mapper.Map(updateDTO, pancho);
-            _db.Panchos.Update(panchoMapped);
-            _db.SaveChanges();
+            var panchoMapped = _mapper.Map(updateDTO, panchito);
 
-            return panchoMapped;
+            await _repo.UpdateOne(panchoMapped);
+
+            return _mapper.Map<PanchoDTO>(panchoMapped);
         }
 
-        public void DeleteOneById(int id)
+        async public Task DeleteOneById(int id)
         {
-            var pancho = GetOneByIdOrException(id);
-            _db.Panchos.Remove(pancho);
-            _db.Panchos.Remove(pancho);
-            _db.SaveChanges();
+            var p = await GetOneByIdOrException(id);
+            var pancho = _mapper.Map<Pancho>(p);
+            await _repo.DeleteOne(pancho);
         }
     }
 }

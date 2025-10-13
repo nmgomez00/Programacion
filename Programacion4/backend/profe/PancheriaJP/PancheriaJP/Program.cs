@@ -3,6 +3,7 @@ using Introduccion.Utils;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PancheriaJP.Config;
+using PancheriaJP.Repositories;
 using PancheriaJP.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,12 +33,20 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
 
 // Services
 builder.Services.AddScoped<PanchoServices>();
+builder.Services.AddScoped<IngredienteServices>();
+builder.Services.AddScoped<CategoriaServices>();
+
+//Repositories
+builder.Services.AddScoped<IPanchoRepository, PanchoRepository>();
+builder.Services.AddScoped<IIngredienteRepository, IngredienteRepository>();
+builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
 
 // Mapper
 builder.Services.AddAutoMapper(opts => { }, typeof(Mapping));
 
 // DB
-builder.Services.AddDbContext<ApplicationDbContext>( options => {
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
     options.UseSqlServer(builder.Configuration.GetConnectionString("devConnection"));
 });
 
@@ -48,7 +57,6 @@ app.UseCors(opts =>
     opts.AllowAnyMethod();
     opts.AllowAnyOrigin();
     opts.AllowAnyHeader();
-    //opts.WithOrigins() // -> Usar esto para restringir a ciertos dominios
 });
 
 // Configure the HTTP request pipeline.
