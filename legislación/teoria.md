@@ -16,11 +16,6 @@
     - [Principios del derecho laboral](#principios-del-derecho-laboral)
   - [04/09/25](#040925)
     - [Principio protectorio](#principio-protectorio)
-    - [Principio de la aplicación de la norma mas beneficiosa](#principio-de-la-aplicación-de-la-norma-mas-beneficiosa)
-    - [Articulo 12 de la LCT: Principio de irrenunciabilidad.](#articulo-12-de-la-lct-principio-de-irrenunciabilidad)
-    - [Principio de la regla in dubio pro operario](#principio-de-la-regla-in-dubio-pro-operario)
-    - [Articulo 10 (conservación del contrato)](#articulo-10-conservación-del-contrato)
-    - [Articulo 20 LCT](#articulo-20-lct)
     - [Derecho procesal laboral](#derecho-procesal-laboral)
   - [11/09/25](#110925)
     - [Partes en el proceso laboral](#partes-en-el-proceso-laboral)
@@ -33,6 +28,7 @@
   - [09/10/25](#091025)
     - [DERECHO PROCESAL PENAL:](#derecho-procesal-penal)
     - [FASES DEL PROCESO PENAL:](#fases-del-proceso-penal)
+      - [Finalidad del IPP.](#finalidad-del-ipp)
     - [CIERRE DE LA ETAPA PREPARATORIA Y ELEVACION A JUICIO.](#cierre-de-la-etapa-preparatoria-y-elevacion-a-juicio)
 
 ## Legislacion apuntes
@@ -101,27 +97,18 @@ El derecho del trabajo conforma una rama autónoma del derecho desgajada del tro
 Este principio se encuentra consagrado en la ley de contrato de trabajo consagrando los siguientes:
 
 1. Principio de la provision mas favorable (artículos 7 y 8 LCT).
+   
 2. Articulo 7: condiciones menos favorables. Las partes en ningún caso pueden pactar condiciones menos favorables para el trabajador que las dispuestas en las normas legales. Tales actos traen aparejadas la sanción prevista en la ley (LCT) que es la nulidad entendiéndose la misma como la inexistencia del acto.
+  
+3. Principio de la aplicación de la norma mas beneficiosa: En caso de duda sobre la aplicación de las normas legales prevalecerá la mas favorable al trabajador.
 
-### Principio de la aplicación de la norma mas beneficiosa
+4. Articulo 12 de la LCT: Principio de irrenunciabilidad: Toda convención de partes, que suprima o reduzca los derechos previstos en esta ley serán declarados nulos.
 
-En caso de duda sobre la aplicación de las normas legales prevalecerá la mas favorable al trabajador.
+5. Principio de la regla in dubio pro operario: Esto significa que ante la duda en la interpretación del derecho, habrá de preferirse la version que favorezca mas al trabajador.
 
-### Articulo 12 de la LCT: Principio de irrenunciabilidad.
+6. Articulo 10 (conservación del contrato): En caso de duda, las situaciones deben resolverse en favor de la continuidad o subsistencia del contrato.
 
-Toda convención de partes, que suprima o reduzca los derechos previstos en esta ley serán declarados nulos.
-
-### Principio de la regla in dubio pro operario
-
-Esto significa que ante la duda en la interpretación del derecho, habrá de preferirse la version que favorezca mas al trabajador.
-
-### Articulo 10 (conservación del contrato)
-
-En caso de duda, las situaciones deben resolverse en favor de la continuidad o subsistencia del contrato.
-
-### Articulo 20 LCT
-
-El trabajador gozara el beneficio de la gratuidad de los procedimientos judiciales.
+7. Articulo 20 LCT: El trabajador gozara el beneficio de la gratuidad de los procedimientos judiciales.
 
 ### Derecho procesal laboral
 
@@ -191,10 +178,12 @@ El proceso penal se desarrolla en distintas fases que caracterizan distintos mom
    Si la investigación comenzara por iniciativa de la policía esta comunicaría al fiscal actuante quien ejercerá el control e impartira instrucciones.
    La denuncia podrá ser también ante el juez, ante el ministerio publico o la policía. Tienen obligación de denunciar delitos perseguibles de oficio (ejemplo: robo, hurto) los funcionarios públicos o empleados públicos que los conozcan con ocasión del ejercicio de sus funciones como asi también los profesionales de la medicina, farmacéuticos y de mas hombres y mujeres que ejerzan el arte de curar.  
    IPP: investigación penal preparatoria: etapa preparatoria del juicio que tiene como finalidad dar base a la acusación o determinar el sobreseimiento.
-   Finalidad del IPP.
-1. Comprobar mediante las diligencias conducentes al descubrimiento de la verdad si existe un hecho delictueso
-1. Establecer las circunstancias que lo califiquen agraven , atenúen, justifiquen o incidan en su punibilidad
-   3_Individualizar a las personas autora y participe del echo investigado.
+
+#### Finalidad del IPP.
+
+1. Comprobar mediante las diligencias conducentes al descubrimiento de la verdad si existe un hecho delictuoso
+1. Establecer las circunstancias que lo califiquen agraven , atenúen, justifiquen o incidan en su punibilidad.
+1. Individualizar a las personas autora y participe del echo investigado.
 1. Verificar la edad, educación, costumbres, condiciones de vida, medios de subsistencia y antecedente de la persona imputada, el estado y desarrollo de sus facultades mentales, las condiciones en que actuó, los medios que han podido llevarlo a delinquir y las demás circunstancias que revelen su mayor o menor grado de peligrosidad.
 1. Comprobar a los efectos penales la extensión del daño causado por el delito
 
