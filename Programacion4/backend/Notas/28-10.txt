@@ -1,0 +1,29 @@
+--- implementacion de cookies ---
+...
+...
+...
+- Le cambio los cors para dejar que el front solo se conecte
+- cambio el front para adptarlo
+	- elimino el token
+	- puso credentials "include"
+- implementa logout en backend (authServices)
+- implementa en signout en el frontend (en react auth.js) y home.jsx
+- Solucion del problema de que aparece opcion de logout cuando se elimina la cookie
+- crea un metodo checkout asincrono para ver si esta logueado
+- Usa el app para ejecutarlo en un useEffect y si sale falso el resultado usa logOut() y signOut()
+- Modifica el users.jsx para verificar si no esta autenticado (del store), y tambien con un rol especifico
+ y retorna un componente Redireccion 
+- Ocultar metodo health en swagger
+- va hacer que un admin pueda registrar un usuario
+- mejoro la lista de usuarios con flowbite y lo adapta
+- crea un componente register.jsx que va debajo de la lista 
+con flowbite y lo adapta
+- En auth.js implementa el servicio register
+- usa tanstack mutation para generar un registro nuevo en register 
+y usa useForm con reset, handlaSubmit y register
+- Usamos tanstack query para realizar peticiones sin recargar la pagina, como
+un SPA
+- Para ello invalidamos queries con invalidateQueries
+
+[lunes intro a email, no entra en el parcial]
+[martes consulta]
