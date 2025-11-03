@@ -1,0 +1,123 @@
+resend.com --> crear cuenta
+------------------
+FRONTEND
+npm create-email@latest
+instala:react email
+- permite escribir y generar tablas (un estandar por tema de seguridad)
+- cd react-email-starter
+- npm i
+code .
+npm run dev
+tsconfig  configuracion para usar typescript
+README.md como correr el programa
+package-json --> tiene los comandos, vamos a usar algunos
+carpeta importante emails
+static:tenemos componentes hechos con react (los puedo ver en localhost)
+en la pagina podemos ver el react y el HTML
+Eliminamos los componentes en static
+y creo ahi mismo uno nuevo "example.tsx"
+creamos  un componente con "hola mundo"
+el server actualiza y se muestra en localhost
+"estamos haciendo templates"
+necesitamos una bibloteca llamada handlebars
+registra lo que esta adentro de {{}} y reemplaza eso con una expresion
+tailwind es compatible
+añadimos la base hecha por el profe
+--------
+flujo: usuario se registra, envio de confirmacion de email, se envia un link que apunta a un endpoint de la api
+el link va a tener query params: user_id, token 
+guardo en la base de datos con dos datos email confirmado (email unverified - enum) y un token
+cuando el usuario presiona el link se elimina el token y cambia el email a verified
+FUTURO: proceso de cambiar contraseña (envio de mail etc...)
+
+npm run export
+crea carpeta out
+- static
+//  vinculacion - resend
+------------------
+BACKEND
+resend
+agregamos 2 parametros al usuario bool isEmailConfirmed =false, string? validationToken=null 
+DTO user with password (DTO de retorno)
+isEmailConfirmed ---> para hacer muchas acciones (pedir confirmacion etc..)
+
+nugget 
+add-migration emailLogic
+update-database
+(confirmamos en DBeaver o SqlManagmentStudio)
+Creamos una carpeta en el proyeto llamada Templates y ahi adentro pongo los html 
+Handlebars es javascript, por ello existe Handlebars para .net
+README.md explicacion (Registering Partials)
+--nugget---
+instalo handlebars.net
+voy a utils, y agrego un archivo HandlebarsHelper (una clase estatica)
+creamos metodos publicos static Render(string source, object data)
+- dentro del metodo creamos un template
+- creamos un result  (de la documentacion)
+creamos un alias para metodos en el seteo del proyecto
+
+- los template son estaticos, tiene un trato especial, los debo incluir
+en auth con la etiqueta content y CopyToOutputDirectory
+
+- creamos otro metodo 
+public static RenderFile(string filepath,object data){
+	if(!File.Exists(filepath)){
+		throw new fileNotFoundExeption($"message")
+	}
+	// copiamos el texto del archivo
+	// se lo pasamos al template y lo retornamos
+}
+- cramos otro metodo (candidato a servicio de email)
+public static GenerateEmailConfirmTemplate(object data){
+	//debemos combinar rutas  y dependencias
+	var filePath =Path.Combine(AppContext.BaseDirectory, "Templates", "confirm-email.html")
+	return RenderFile(filePath,data)
+	
+}
+- instalamos Resend
+
+debemos registrar los servicios en program.cs
+//Email
+//usamos variable de entorno
+-tipos de entorno HTTP HTTPs WSL etc.. usamos HTTPS
+creamos una api key "sending access"
+en  guardamos la variable de entorno (en un json)
+creamos el servicio EmailServices
+creamos private readonly IResend _resend
+private readonly IHTTPContextAccesor _...
+
+registramos en el program.cs debajo de //URL
+
+inyectamos esos private Attr
+
+creamos un metodo private string GetBaseUrl() //candidato a ser abstraido a un servicio especifo
+	var req = _contextAccessor.HttpContext?.Request ?? thrownew InvalidOpetarionExeption("No hay HTTP 
+context disponible"
+	//armamos la url
+	return $"{req.Scheme}://{req.Host}{reql.PathBase}".TrimEnd("/")
+)
+async private Task Execute(EmailMessage){
+	var res = await _resend.EmailSendAsync(message)
+	Console.WriteLine("Email sent:{res}");
+}
+async public Task SendEmailConfirmation(User user){
+	var message = nre EmailMessage();
+	message.from = "no-reply <onborarding@resend.dev>";
+	message.To.Add(User.Email)
+	message.To.Add("delivered@resend.dev")
+	message.Subject = "Confirm your Email";
+	
+	var data = new{
+	username = user.Username,
+	appName = "DelfiCoprs SA",
+	confirmUrl = $"{getBaseUrl()}/api/auth/confirm-email?user_id={user.Id}&token={user.ValidationToken}" 
+//no importa el orden en la queryparams
+var html HandleBarsHelper.GenerateEmailConfirmTemplate(data);
+message.HtmlBody = html
+await Execute(message)
+	}
+//inyectamos el servicio en UserServices
+//despues de crear la contraseña creamos el token Guid
+// despues de crear el usuario envio el mail 
+	
+}
